@@ -28,7 +28,7 @@
 
 /* Hero Section Styles */
 .hero-section {
-  background-image: url('path/to/hero-image.jpg'); /* Replace with actual image path */
+  background-image: url('hero-image.jpg'); /* Replace with actual image path */
   background-size: cover;
   background-position: center;
   height: 400px; /* Adjust height as needed */
