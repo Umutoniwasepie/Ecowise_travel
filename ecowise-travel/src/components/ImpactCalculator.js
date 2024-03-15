@@ -15,14 +15,27 @@ const ImpactCalculator = () => {
   };
 
   const calculateCarbonFootprint = () => {
-    // Perform calculation based on trip details (sample calculation)
     const { distance, transportationMode, accommodationType, travelers } = tripDetails;
-    const carbonFootprint = distance * 0.1; // Sample calculation
+    let carbonFootprint = distance * 0.1; // Base calculation
+    
+    // Adjust carbon footprint based on transportation mode and accommodation type
+    if (transportationMode === 'car') {
+      carbonFootprint *= 1.2; // Increase carbon footprint for car travel
+    } else if (transportationMode === 'train') {
+      carbonFootprint *= 0.8; // Decrease carbon footprint for train travel
+    }
+
+    if (accommodationType === 'hotel') {
+      carbonFootprint *= 1.5; // Increase carbon footprint for hotel accommodation
+    } else if (accommodationType === 'camping') {
+      carbonFootprint *= 0.7; // Decrease carbon footprint for camping accommodation
+    }
+
+    // Adjust carbon footprint based on number of travelers
+    carbonFootprint *= travelers;
+
     setCarbonFootprint(carbonFootprint);
   };
-
-  // Utilize transportationMode, accommodationType, and travelers to avoid unused variable warning
-  console.log(tripDetails.transportationMode, tripDetails.accommodationType, tripDetails.travelers);
 
   return (
     <div style={styles.container}>
@@ -44,7 +57,7 @@ const ImpactCalculator = () => {
         <input type="number" name="travelers" value={tripDetails.travelers} onChange={handleInputChange} />
       </div>
       <button onClick={calculateCarbonFootprint}>Calculate</button>
-      {carbonFootprint > 0 && <p>Carbon Footprint: {carbonFootprint} kg CO2</p>}
+      {carbonFootprint > 0 && <p>Carbon Footprint: {carbonFootprint.toFixed(2)} kg CO2</p>}
     </div>
   );
 };
