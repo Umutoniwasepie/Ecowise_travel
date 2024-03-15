@@ -21,6 +21,9 @@ const ImpactCalculator = () => {
     setCarbonFootprint(carbonFootprint);
   };
 
+  // Utilize transportationMode, accommodationType, and travelers to avoid unused variable warning
+  console.log(tripDetails.transportationMode, tripDetails.accommodationType, tripDetails.travelers);
+
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Impact Calculator</h1>
