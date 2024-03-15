@@ -9,6 +9,17 @@ const AdventureSearchPage = () => {
     // Add more adventure data as needed
   ];
 
+  // Render adventures list
+  const renderAdventures = () => {
+    return adventures.map(adventure => (
+      <div key={adventure.id}>
+        <h3>{adventure.name}</h3>
+        <p>Location: {adventure.location}</p>
+        <p>Rating: {adventure.rating}</p>
+      </div>
+    ));
+  };
+
   return (
     <div style={styles.container}>
       {/* Header */}
@@ -29,7 +40,8 @@ const AdventureSearchPage = () => {
       {/* Adventure Search Content */}
       <div style={styles.searchContainer}>
         <h1 style={styles.title}>Adventure Search</h1>
-        {/* Add search bar and search results components here */}
+        {/* Render adventures */}
+        {renderAdventures()}
       </div>
     </div>
   );
