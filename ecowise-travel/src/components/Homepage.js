@@ -1,5 +1,3 @@
-// src/components/Homepage.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css'; // Import CSS file for styling
@@ -10,7 +8,7 @@ const Homepage = () => {
             {/* Header */}
             <header className="header">
                 <div className="logo">
-                    <img src="ecowise-logo.png" alt="EcoWise Travel" />
+                    <img src="ecowise-logo.png" alt="EcoWise Travel Logo" />
                 </div>
                 <nav className="navigation">
                     <ul>
@@ -29,8 +27,7 @@ const Homepage = () => {
                     <p>Discover eco-friendly adventures and make a positive impact on the environment.</p>
                 </div>
                 <div className="hero-image">
-                    {/* Add a visually appealing image or video */}
-                    <img src="hero-image.jpg" alt="Eco-Friendly Travel" />
+                    <img src="hero-image.jpg" alt="Eco-Friendly Travel Destinations" />
                 </div>
             </section>
 
@@ -38,8 +35,7 @@ const Homepage = () => {
             <section className="search-section">
                 <h2>Find Your Next Eco-Friendly Adventure</h2>
                 <div className="search-bar">
-                    {/* Add a search bar component */}
-                    <input type="text" placeholder="Search adventures..." />
+                    <input type="text" placeholder="Search adventures..." aria-label="Search Adventures" />
                     <button>Search</button>
                 </div>
                 <p>Filter by location, activity type, sustainability ratings, and more.</p>
@@ -48,7 +44,20 @@ const Homepage = () => {
             {/* Featured Content */}
             <section className="featured-content">
                 <h2>Featured Destinations</h2>
-                {/* Add cards or tiles showcasing featured destinations, tips, or testimonials */}
+                <div className="featured-cards">
+                    {/* Add cards or tiles showcasing featured destinations, tips, or testimonials */}
+                    <div className="card">
+                        <img src="featured-image1.jpg" alt="Featured Destination 1" />
+                        <h3>Featured Destination 1</h3>
+                        <p>Description of the destination...</p>
+                    </div>
+                    <div className="card">
+                        <img src="featured-image2.jpg" alt="Featured Destination 2" />
+                        <h3>Featured Destination 2</h3>
+                        <p>Description of the destination...</p>
+                    </div>
+                    {/* Add more cards as needed */}
+                </div>
             </section>
 
             {/* Footer */}
@@ -61,7 +70,7 @@ const Homepage = () => {
                     </ul>
                 </div>
                 <div className="social-media">
-                    {/* Add social media icons */}
+                    {/* Use official social media icons */}
                     <a href="https://www.facebook.com"><i className="fab fa-facebook"></i></a>
                     <a href="https://www.twitter.com"><i className="fab fa-twitter"></i></a>
                     <a href="https://www.instagram.com"><i className="fab fa-instagram"></i></a>
@@ -75,4 +84,3 @@ const Homepage = () => {
 }
 
 export default Homepage;
-
