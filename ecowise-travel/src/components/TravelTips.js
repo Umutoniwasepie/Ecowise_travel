@@ -1,10 +1,23 @@
 import React from 'react';
 
 const TravelTips = () => {
+  // Sample travel tips data
+  const travelTips = [
+    'Pack light and only bring the essentials.',
+    'Research local customs and traditions before traveling.',
+    'Stay hydrated and eat healthily while on the road.',
+    'Always carry a reusable water bottle and refill it whenever possible.',
+    'Book eco-friendly accommodations and support sustainable tourism.'
+  ];
+
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Travel Tips</h1>
-      {/* Add travel tips content here */}
+      <ul style={styles.tipsList}>
+        {travelTips.map((tip, index) => (
+          <li key={index} style={styles.tip}>{tip}</li>
+        ))}
+      </ul>
     </div>
   );
 };
@@ -19,7 +32,14 @@ const styles = {
     fontWeight: 'bold',
     marginBottom: '20px',
   },
+  tipsList: {
+    listStyleType: 'none',
+    padding: 0,
+  },
+  tip: {
+    fontSize: '16px',
+    marginBottom: '10px',
+  }
 };
 
 export default TravelTips;
-
