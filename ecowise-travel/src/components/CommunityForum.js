@@ -16,7 +16,7 @@ const CommunityForum = () => {
   useEffect(() => {
     // In a real application, you would fetch data from an API
     setPosts(dummyPosts);
-  }, []);
+  }, [dummyPosts]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
