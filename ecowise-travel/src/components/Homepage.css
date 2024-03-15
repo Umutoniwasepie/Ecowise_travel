@@ -1,0 +1,107 @@
+/* src/components/Homepage.css */
+
+/* Header Styles */
+.header {
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #336633; /* Eco-friendly green color */
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: #336633; /* Eco-friendly green color */
+}
+
+/* Hero Section Styles */
+.hero {
+  background-image: url('path/to/hero-image.jpg'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff; /* White text color */
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* Search Section Styles */
+.search {
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.search button {
+  padding: 10px 20px;
+  background-color: #336633; /* Eco-friendly green color */
+  color: #ffffff; /* White text color */
+  border: none;
+  cursor: pointer;
+}
+
+/* Featured Content Styles */
+.featured-content {
+  padding: 40px 20px;
+}
+
+.featured-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #336633; /* Eco-friendly green color */
+  color: #ffffff; /* White text color */
+  padding: 20px;
+  text-align: center;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer li:last-child {
+  margin-right: 0;
+}
+
