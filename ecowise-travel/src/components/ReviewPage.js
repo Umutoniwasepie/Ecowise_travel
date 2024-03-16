@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ReviewPage = () => {
   const [review, setReview] = useState({
@@ -25,6 +26,23 @@ const ReviewPage = () => {
   };
 
   return (
+     <div style={styles.container}>
+      {/* Header */}
+      <header style={styles.header}>
+        <div style={styles.logo}>
+          <img src="ecowise-logo.png" alt="EcoWise Travel" />
+        </div>
+        <nav style={styles.navigation}>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/adventures">Adventures</Link></li>
+            <li><Link to="/impact-calculator">Impact Calculator</Link></li>
+            <li><Link to="/travel-tips">Travel Tips</Link></li>
+            <li><Link to="/community-forum">Community Forum</Link></li>
+          </ul>
+        </nav>
+      </header>
+  
     <div style={styles.container}>
       <h1 style={styles.title}>Submit a Review</h1>
       <form onSubmit={handleSubmit}>
@@ -65,6 +83,7 @@ const ReviewPage = () => {
         </div>
         <button type="submit">Submit Review</button>
       </form>
+    </div>
     </div>
   );
 };
