@@ -57,23 +57,23 @@ const ImpactCalculator = () => {
   
     <div style={styles.container}>
       <h1 style={styles.title}>Impact Calculator</h1>
-      <div>
-        <label>Distance (km):</label>
-        <input type="number" name="distance" value={tripDetails.distance} onChange={handleInputChange} />
-      </div>
-      <div>
-        <label>Transportation Mode:</label>
-        <input type="text" name="transportationMode" value={tripDetails.transportationMode} onChange={handleInputChange} />
-      </div>
-      <div>
-        <label>Accommodation Type:</label>
-        <input type="text" name="accommodationType" value={tripDetails.accommodationType} onChange={handleInputChange} />
-      </div>
-      <div>
-        <label>Number of Travelers:</label>
-        <input type="number" name="travelers" value={tripDetails.travelers} onChange={handleInputChange} />
-      </div>
-      <button onClick={calculateCarbonFootprint}>Calculate</button>
+    <div>
+       <label htmlFor="distance">Distance (km):</label>
+       <input type="number" id="distance" name="distance" value={tripDetails.distance} onChange={handleInputChange} />
+    </div>
+    <div>
+       <label htmlFor="transportationMode">Transportation Mode:</label>
+       <input type="text" id="transportationMode" name="transportationMode" value={tripDetails.transportationMode} onChange={handleInputChange} />
+    </div>
+    <div>
+      <label htmlFor="accommodationType">Accommodation Type:</label>
+      <input type="text" id="accommodationType" name="accommodationType" value={tripDetails.accommodationType} onChange={handleInputChange} />
+    </div>
+    <div>
+      <label htmlFor="travelers">Number of Travelers:</label>
+      <input type="number" id="travelers" name="travelers" value={tripDetails.travelers} onChange={handleInputChange} />
+    </div>
+      <button type="button" onClick={calculateCarbonFootprint}>Calculate</button>
       {carbonFootprint > 0 && <p>Carbon Footprint: {carbonFootprint.toFixed(2)} kg CO2</p>}
     </div>
     </div>
