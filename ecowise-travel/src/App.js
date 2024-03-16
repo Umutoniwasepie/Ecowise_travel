@@ -26,7 +26,6 @@ function App() {
           <Route path="/adventures" element={<AdventureSearchPage />} />
           <Route path="/community-forum" element={<CommunityForum />} />
           <Route path="/impact-calculator" element={<ImpactCalculator />} />
-          <Route path="/travel-tips" element={<TravelTips />} />
         </Routes>
         <Footer />
       </div>
