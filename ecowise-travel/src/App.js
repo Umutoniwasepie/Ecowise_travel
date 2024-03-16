@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import HamburgerIcon from './components/HamburgerIcon';
 import HomePage from './components/HomePage';
 import AdventureSearchPage from './components/AdventureSearchPage';
 import ImpactCalculator from './components/ImpactCalculator';
@@ -11,6 +12,11 @@ import ReviewPage from './components/ReviewPage';
 import './App.css';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu open/close
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen); // Function to toggle menu state
+  };
   return (
     <Router>
       <div className="App">
