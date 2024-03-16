@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TravelTips = () => {
   // Sample travel tips data
@@ -11,6 +12,22 @@ const TravelTips = () => {
   ];
 
   return (
+     <div style={styles.container}>
+      {/* Header */}
+      <header style={styles.header}>
+        <div style={styles.logo}>
+          <img src="ecowise-logo.png" alt="EcoWise Travel" />
+        </div>
+        <nav style={styles.navigation}>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+              <li><Link to="/adventures">Adventures</Link></li>
+            <li><Link to="/impact-calculator">Impact Calculator</Link></li>
+            <li><Link to="/community-forum">Community Forum</Link></li>
+          </ul>
+        </nav>
+      </header>
+  
     <div style={styles.container}>
       <h1 style={styles.title}>Travel Tips</h1>
       <ul style={styles.tipsList}>
@@ -19,6 +36,8 @@ const TravelTips = () => {
         ))}
       </ul>
     </div>
+   </div>
+
   );
 };
 
