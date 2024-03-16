@@ -30,7 +30,6 @@ const AdventureSearchPage = () => {
             <li><Link to="/community-forum">Community Forum</Link></li>
           </ul>
         </nav>
-      </header>
 
       {/* Adventure Search Content */}
       <div style={styles.searchContainer}>
