@@ -71,9 +71,9 @@ const Homepage = () => {
                 </div>
                 <div className="social-media">
                     {/* Use official social media icons */}
-                    <a href="https://www.facebook.com"><i className="fab fa-facebook"></i></a>
-                    <a href="https://www.twitter.com"><i className="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com"><i className="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" title="Facebook"><i className="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" title="Twitter"><i className="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" title="Instagram"><i className="fab fa-instagram"></i></a>
                 </div>
                 <div className="copyright">
                     <p>&copy; 2024 EcoWise Travel. All rights reserved.</p>
