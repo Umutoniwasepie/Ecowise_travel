@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -7,7 +7,7 @@ const Header = () => {
       <div className="logo">
         <img src="ecowise-logo.png" alt="EcoWise Travel Logo" />
       </div>
-      <nav 
+      <nav>
         <button className="menu-button">
           <span>&#xE5D2;</span> {/* Unicode for the menu icon */}
         </button>
