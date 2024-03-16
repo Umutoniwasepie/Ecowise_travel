@@ -1,18 +1,32 @@
-// Header.js
-
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import HamburgerIcon from './HamburgerIcon'; // Import the HamburgerIcon component
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header>
-      {/* Header content goes here */}
-      <h1>EcoWise Travel</h1>
-      <nav>
-        {/* Navigation links can go here */}
+      <div className="logo">
+        <img src="ecowise-logo.png" alt="EcoWise Travel Logo" />
+      </div>
+      <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+        {/* Navigation links */}
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/adventures">Adventures</Link></li>
+          <li><Link to="/travel-tips">Travel Tips</Link></li>
+          <li><Link to="/community-forum">Community Forum</Link></li>
+        </ul>
       </nav>
+      {/* Hamburger icon */}
+      <HamburgerIcon isOpen={isMenuOpen} toggleMenu={toggleMenu} />
     </header>
   );
 };
 
 export default Header;
-
