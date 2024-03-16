@@ -33,9 +33,9 @@ const CommunityForum = () => {
         <nav style={styles.navigation}>
           <ul>
             <li><Link to="/">Home</Link></li>
+            <li><Link to="/adventures">Adventures</Link></li>
             <li><Link to="/impact-calculator">Impact Calculator</Link></li>
             <li><Link to="/travel-tips">Travel Tips</Link></li>
-            <li><Link to="/community-forum">Community Forum</Link></li>
           </ul>
         </nav>
       </header>
