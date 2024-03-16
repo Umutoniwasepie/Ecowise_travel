@@ -20,6 +20,7 @@ function App() {
           <Route path="/search" element={<AdventureSearchPage />} />
           <Route path="/reviews" element={<ReviewPage />} />
           {/* Add routes for new paths */}
+          <Route path="/travel-tips" element={<TravelTips />} />
           <Route path="/adventures" element={<AdventureSearchPage />} />
           <Route path="/community-forum" element={<CommunityForum />} />
           <Route path="/impact-calculator" element={<ImpactCalculator />} />
