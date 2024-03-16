@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ImpactCalculator = () => {
   const [tripDetails, setTripDetails] = useState({
@@ -38,6 +39,22 @@ const ImpactCalculator = () => {
   };
 
   return (
+     <div style={styles.container}>
+      {/* Header */}
+      <header style={styles.header}>
+        <div style={styles.logo}>
+          <img src="ecowise-logo.png" alt="EcoWise Travel" />
+        </div>
+        <nav style={styles.navigation}>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/impact-calculator">Impact Calculator</Link></li>
+            <li><Link to="/travel-tips">Travel Tips</Link></li>
+            <li><Link to="/community-forum">Community Forum</Link></li>
+          </ul>
+        </nav>
+      </header>
+  
     <div style={styles.container}>
       <h1 style={styles.title}>Impact Calculator</h1>
       <div>
@@ -58,6 +75,7 @@ const ImpactCalculator = () => {
       </div>
       <button onClick={calculateCarbonFootprint}>Calculate</button>
       {carbonFootprint > 0 && <p>Carbon Footprint: {carbonFootprint.toFixed(2)} kg CO2</p>}
+    </div>
     </div>
   );
 };
