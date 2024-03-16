@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import HamburgerIcon from './HamburgerIcon'; // Import the HamburgerIcon component
+import './Header.css'; // Import the header styles 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
