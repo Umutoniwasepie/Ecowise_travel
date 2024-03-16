@@ -1,21 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import HamburgerIcon from './HamburgerIcon'; // Import the HamburgerIcon component
-import './HamburgerIcon.css'; // Import the header styles 
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <header>
       <div className="logo">
         <img src="ecowise-logo.png" alt="EcoWise Travel Logo" />
       </div>
-      <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+      <nav 
+        <button className="menu-button">
+          <span>&#xE5D2;</span> {/* Unicode for the menu icon */}
+        </button>
         {/* Navigation links */}
         <ul>
           <li><Link to="/">Home</Link></li>
@@ -24,8 +19,6 @@ const Header = () => {
           <li><Link to="/community-forum">Community Forum</Link></li>
         </ul>
       </nav>
-      {/* Hamburger icon */}
-      <HamburgerIcon isOpen={isMenuOpen} toggleMenu={toggleMenu} />
     </header>
   );
 };
