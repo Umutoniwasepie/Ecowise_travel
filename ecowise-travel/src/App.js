@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -17,10 +17,12 @@ function App() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen); // Function to toggle menu state
   };
+
   return (
     <Router>
       <div className="App">
         <Header />
+        <HamburgerIcon isOpen={isMenuOpen} onClick={toggleMenu} />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route path="/search" element={<AdventureSearchPage />} />
