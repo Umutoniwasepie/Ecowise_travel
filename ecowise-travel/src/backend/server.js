@@ -1,10 +1,10 @@
-// src/server.js
+// src/backend/server.js
 const express = require('express');
 require('dotenv').config();
-const connectDB = require('./src/backend/db'); // Import database connection
-const userRoutes = require('./src/backend/routes/userRoutes'); // Import user routes
-const postRoutes = require('./src/backend/routes/postRoutes'); // Import post routes
-const commentRoutes = require('./src/backend/routes/commentRoutes'); // Import comment routes
+const connectDB = require('./db'); // Corrected path
+const userRoutes = require('./routes/userRoutes'); // Import user routes
+const postRoutes = require('./routes/postRoutes'); // Import post routes
+const commentRoutes = require('./routes/commentRoutes'); // Import comment routes
 
 const app = express();
 const PORT = process.env.PORT || 3000;
