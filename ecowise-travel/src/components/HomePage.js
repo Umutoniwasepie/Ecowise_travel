@@ -7,9 +7,6 @@ const Homepage = () => {
         <div className="homepage-container">
             {/* Header */}
             <header className="header">
-                <div className="logo">
-                    <img src="ecowise-logo.png" alt="EcoWise Travel Logo" />
-                </div>
                 <nav className="navigation">
                     <ul>
                         <li><Link to="/adventures">Adventures</Link></li>
