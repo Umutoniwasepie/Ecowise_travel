@@ -26,7 +26,7 @@ const ReviewPage = () => {
   };
 
   return (
-     <div 
+     <div> 
         <nav style={styles.navigation}>
           <ul>
             <li><Link to="/">Home</Link></li>
