@@ -25,14 +25,14 @@ const CommunityForum = () => {
 
   return (
     <div>
-        <nav style={styles.navigation}>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/adventures">Adventures</Link></li>
-            <li><Link to="/impact-calculator">Impact Calculator</Link></li>
-            <li><Link to="/travel-tips">Travel Tips</Link></li>
-          </ul>
-        </nav>
+      <nav style={styles.navigation}>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/adventures">Adventures</Link></li>
+          <li><Link to="/impact-calculator">Impact Calculator</Link></li>
+          <li><Link to="/travel-tips">Travel Tips</Link></li>
+        </ul>
+      </nav>
 
       {/* Community Forum Content */}
       <div style={styles.container}>
@@ -63,7 +63,6 @@ const CommunityForum = () => {
           ))}
         </div>
       </div>
-     </div>
     </div>
   );
 };
