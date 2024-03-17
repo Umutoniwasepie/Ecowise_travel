@@ -48,7 +48,6 @@ const ImpactCalculator = () => {
             <li><Link to="/community-forum">Community Forum</Link></li>
           </ul>
         </nav>
-      </header>
   
     <div style={styles.container}>
       <h1 style={styles.title}>Impact Calculator</h1>
