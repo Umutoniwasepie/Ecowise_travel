@@ -36,7 +36,6 @@ const ReviewPage = () => {
             <li><Link to="/community-forum">Community Forum</Link></li>
           </ul>
         </nav>
-      </header>
   
     <div style={styles.container}>
       <h1 style={styles.title}>Submit a Review</h1>
