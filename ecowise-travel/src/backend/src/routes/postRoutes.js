@@ -3,11 +3,11 @@ const router = express.Router();
 const PostController = require('../controllers/PostController');
 
 // Routes for Post resource
-router.get('/posts', PostController.getAllPosts);
-router.get('/posts/:id', PostController.getPostById);
-router.post('/posts', PostController.createPost);
-router.put('/posts/:id', PostController.updatePost);
-router.delete('/posts/:id', PostController.deletePost);
+router.get('/', PostController.getAllPosts);
+router.get('/:id', PostController.getPostById);
+router.post('/', PostController.createPost);
+router.put('/:id', PostController.updatePost);
+router.delete('/:id', PostController.deletePost);
 
 module.exports = router;
 
