@@ -26,12 +26,7 @@ const ReviewPage = () => {
   };
 
   return (
-     <div style={styles.container}>
-      {/* Header */}
-      <header style={styles.header}>
-        <div style={styles.logo}>
-          <img src="ecowise-logo.png" alt="EcoWise Travel" />
-        </div>
+     <div 
         <nav style={styles.navigation}>
           <ul>
             <li><Link to="/">Home</Link></li>
