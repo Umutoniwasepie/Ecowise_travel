@@ -1,24 +1,25 @@
 // src/backend/server.js
+
 const express = require('express');
 require('dotenv').config();
-const connectDB = require('./db'); // Corrected path
-const userRoutes = require('./src/routes/userRoutes'); // Import user routes
-const postRoutes = require('./src/routes/postRoutes'); // Import post routes
-const commentRoutes = require('./src/routes/commentRoutes'); // Import comment routes
+const connectDB = require('./db'); // Import the connectDB function
+const userRoutes = require('./src/routes/userRoutes');
+const postRoutes = require('./src/routes/postRoutes');
+const commentRoutes = require('./src/routes/commentRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(express.json()); // Parse JSON bodies
+app.use(express.json());
 
 // Connect to MongoDB
 connectDB()
   .then(() => {
     // Routes
-    app.use('/api/users', userRoutes); // Mount user routes under /api/users
-    app.use('/api/posts', postRoutes); // Mount post routes under /api/posts
-    app.use('/api/comments', commentRoutes); // Mount comment routes under /api/comments
+    app.use('/api/users', userRoutes);
+    app.use('/api/posts', postRoutes);
+    app.use('/api/comments', commentRoutes);
 
     // Default route
     app.get('/', (req, res) => {
