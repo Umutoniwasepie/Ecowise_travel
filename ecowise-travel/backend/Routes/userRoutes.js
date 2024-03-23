@@ -5,6 +5,7 @@ const router = express.Router();
 const UserController = require('../Controllers/UserController');
 const bcrypt = require('bcrypt'); // Already imported
 const jwt = require('jsonwebtoken'); // New import
+const verifyToken = require('../middlewares/authMiddleware');
 
 // Routes for User resource
 router.get('/', UserController.getAllUsers);
@@ -39,5 +40,10 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// Protected route (requires authentication)
+router.get('/me', verifyToken, async (req, res) => {
+  const user = req.user; // User data from the decoded token
+  res.json(user);
+});
 module.exports = router;
 
