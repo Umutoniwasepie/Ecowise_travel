@@ -1,5 +1,3 @@
-// models/User.js
-
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
@@ -13,15 +11,23 @@ const User = sequelize.define('User', {
   username: {
     type: DataTypes.STRING,
     allowNull: false,
+    unique: true,
+    validate: {
+      notEmpty: true, // Ensure username is not empty
+    },
   },
   email: {
     type: DataTypes.STRING,
     allowNull: false,
     unique: true,
+    validate: {
+      isEmail: true, // Validate email format
+    },
   },
   password: {
     type: DataTypes.STRING,
     allowNull: false,
+    // You'll implement password hashing in UserController.createUser
   },
 });
 

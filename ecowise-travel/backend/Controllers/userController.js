@@ -1,15 +1,15 @@
-// controllers/UserController.js
-
-const pool = require('../config/database');
+const User = require('../models/User');
+const bcrypt = require('bcrypt'); // For password hashing
 
 const UserController = {
   // Get all users
   getAllUsers: async (req, res) => {
     try {
-      const result = await pool.query('SELECT * FROM users');
-      res.json(result.rows);
+      const users = await User.findAll();
+      res.json(users);
     } catch (error) {
-      res.status(500).json({ message: error.message });
+      console.error(error);
+      res.status(500).json({ message: 'Server error' });
     }
   },
 
@@ -17,25 +17,38 @@ const UserController = {
   getUserById: async (req, res) => {
     const id = req.params.id;
     try {
-      const result = await pool.query('SELECT * FROM users WHERE id = $1', [id]);
-      if (result.rows.length === 0) {
-        res.status(404).json({ message: 'User not found' });
-      } else {
-        res.json(result.rows[0]);
+      const user = await User.findByPk(id); // Use findByPk for finding by ID
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
       }
+      res.json(user);
     } catch (error) {
-      res.status(500).json({ message: error.message });
+      console.error(error);
+      res.status(500).json({ message: 'Server error' });
     }
   },
 
   // Create a new user
   createUser: async (req, res) => {
-    const { username, email } = req.body;
+    const { username, email, password } = req.body;
     try {
-      const result = await pool.query('INSERT INTO users (username, email) VALUES ($1, $2) RETURNING *', [username, email]);
-      res.status(201).json(result.rows[0]);
+      // Hash password before saving
+      const salt = await bcrypt.genSalt(10);
+      const hashedPassword = await bcrypt.hash(password, salt);
+
+      const newUser = await User.create({
+        username,
+        email,
+        password: hashedPassword,
+      });
+      res.status(201).json(newUser);
     } catch (error) {
-      res.status(400).json({ message: error.message });
+      console.error(error);
+      // Handle potential validation errors (e.g., email already exists)
+      if (error.name === 'SequelizeUniqueConstraintError') {
+        return res.status(400).json({ message: 'Username or email already exists' });
+      }
+      res.status(500).json({ message: 'Server error' });
     }
   },
 
@@ -44,14 +57,23 @@ const UserController = {
     const id = req.params.id;
     const { username, email } = req.body;
     try {
-      const result = await pool.query('UPDATE users SET username = $1, email = $2 WHERE id = $3 RETURNING *', [username, email, id]);
-      if (result.rows.length === 0) {
-        res.status(404).json({ message: 'User not found' });
-      } else {
-        res.json(result.rows[0]);
+      const user = await User.findByPk(id);
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
       }
+
+      user.username = username;
+      user.email = email;
+      await user.save(); // Save updated user details
+
+      res.json(user);
     } catch (error) {
-      res.status(400).json({ message: error.message });
+      console.error(error);
+      // Handle potential validation errors
+      if (error.name === 'SequelizeUniqueConstraintError') {
+        return res.status(400).json({ message: 'Username or email already exists' });
+      }
+      res.status(500).json({ message: 'Server error' });
     }
   },
 
@@ -59,17 +81,17 @@ const UserController = {
   deleteUser: async (req, res) => {
     const id = req.params.id;
     try {
-      const result = await pool.query('DELETE FROM users WHERE id = $1 RETURNING *', [id]);
-      if (result.rows.length === 0) {
-        res.status(404).json({ message: 'User not found' });
-      } else {
-        res.json({ message: 'User deleted successfully' });
+      const user = await User.findByPk(id);
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
       }
+      await user.destroy();
+      res.json({ message: 'User deleted successfully' });
     } catch (error) {
-      res.status(500).json({ message: error.message });
+      console.error(error);
+      res.status(500).json({ message: 'Server error' });
     }
-  }
+  },
 };
 
 module.exports = UserController;
-
