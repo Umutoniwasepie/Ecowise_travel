@@ -1,6 +1,6 @@
 // controllers/UserController.js
 
-const pool = require('../db');
+const pool = require('../config/database');
 
 const UserController = {
   // Get all users
