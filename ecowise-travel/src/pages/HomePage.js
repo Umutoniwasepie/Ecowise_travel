@@ -14,8 +14,8 @@ const Homepage = () => {
                         <li><Link to="/travel-tips">Travel Tips</Link></li>
                         <li><Link to="/community-forum">Community Forum</Link></li>
                         <li><Link to="/reviews">Review</Link></li>
-                        <li><Link to="/signin">Sign in</Link></li>
-                        <li><Link to="/signup">Sign up</Link></li>
+                        <li><Link to="/Signin">Sign in</Link></li>
+                        <li><Link to="/Signup">Sign up</Link></li>
                     </ul>
                 </nav>
             </header>
