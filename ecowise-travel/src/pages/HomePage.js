@@ -27,7 +27,7 @@ const Homepage = () => {
                     <p>Discover eco-friendly adventures and make a positive impact on the environment.</p>
                 </div>
                 <div className="hero-image">
-                    <img src="hero-image.jpg" alt="Eco-Friendly Travel Destinations" />
+                    <img src="hero-image.jpg" alt=" " />
                 </div>
             </section>
 
@@ -47,14 +47,14 @@ const Homepage = () => {
                 <div className="featured-cards">
                     {/* Add cards or tiles showcasing featured destinations, tips, or testimonials */}
                     <div className="card">
-                        <img src="featured-image1.jpg" alt="Featured Destination 1" />
+                        <img src="featured-image1.jpg" alt=" " />
                         <h3>Featured Destination 1</h3>
                         <p>Description of the destination...</p>
                     </div>
                     <div className="card">
-                        <img src="featured-image2.jpg" alt="Featured Destination 2" />
+                        <img src="featured-image2.jpg" alt=" " />
                         <h3>Featured Destination 2</h3>
-                        <p>Description of the destination...</p>
+                        <p>Rwanda – Your next luxury eco-tourism destination.</p>
                     </div>
                     {/* Add more cards as needed */}
                 </div>
