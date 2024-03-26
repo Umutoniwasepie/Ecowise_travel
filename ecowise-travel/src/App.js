@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import HomePage from './components/HomePage';
-import AdventureSearchPage from './components/AdventureSearchPage';
-import ImpactCalculator from './components/ImpactCalculator';
-import TravelTips from './components/TravelTips';
-import CommunityForum from './components/CommunityForum';
-import ReviewPage from './components/ReviewPage';
+import HomePage from './pages/HomePage';
+import AdventureSearchPage from './pages/AdventureSearchPage';
+import ImpactCalculator from './pages/ImpactCalculator';
+import TravelTips from './pages/TravelTips';
+import CommunityForum from './pages/CommunityForum';
+import ReviewPage from './pages/ReviewPage';
 import './App.css';
 
 function App() {
