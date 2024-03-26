@@ -7,7 +7,7 @@ const Header = () => {
         <div className="logo">
           <img src="ecowise-logo.png" alt="EcoWise Travel Logo" />
         </div>
-        {A conscious travel for change making people}
+        { }
         <h1>EcoWise Travel</h1>
         <nav>
           {/* Navigation links can go here */}
