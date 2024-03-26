@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
+import Signup from './pages/signup';
+import Signin from './pages/signin';
 import AdventureSearchPage from './pages/AdventureSearchPage';
 import ImpactCalculator from './pages/ImpactCalculator';
 import TravelTips from './pages/TravelTips';
@@ -24,6 +26,8 @@ function App() {
           <Route path="/adventures" element={<AdventureSearchPage />} />
           <Route path="/community-forum" element={<CommunityForum />} />
           <Route path="/impact-calculator" element={<ImpactCalculator />} />
+          <Route path="/signin" element={<signin />} />
+          <Route path="/signup" element={<signup />} />
           <Route path="*" element={null} />
         </Routes>
         <Footer />
