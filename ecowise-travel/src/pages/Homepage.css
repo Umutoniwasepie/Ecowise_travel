@@ -93,7 +93,7 @@
 }
 
 .card {
-  width: 48%; /* Adjust card width for two cards per row */
+  width: 40%; /* Adjust card width for two cards per row */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
