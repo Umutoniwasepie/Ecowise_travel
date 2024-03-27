@@ -29,11 +29,11 @@ body {
 
 /* Headings and Text */
 h1, h2, h3, h4, h5, h6 {
-  color: #fff; /* white for headings */
+  color: #333; /* Dark grey for headings */
 }
 
 p {
-  color: #fff; /* white for paragraph text */
+  color: #666; /* white for paragraph text */
 }
 
 /* Accents */
