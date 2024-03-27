@@ -1,9 +1,27 @@
-.ecowise-title {
-  color: #2e8b57; /* Eco-friendly green color */
-  text-decoration: none; /* Remove underline */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff; /* White background for navbar */
+  border-bottom: 1px solid #ddd; /* Light grey border */
 }
 
-.ecowise-title:hover {
-  color: #38a169; /* Darker green on hover (optional) */
+.logo img {
+  height: 40px; /* Adjust height of the logo */
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #78A03C; /* Darker green for link text */
+  margin-left: 1rem;
+}
+
+.nav-link:hover {
+  color: #9DCD43; /* Lighter green for link text on hover */
+}
