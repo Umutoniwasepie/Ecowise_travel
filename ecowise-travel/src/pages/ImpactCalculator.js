@@ -1,67 +1,67 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import axios from 'axios'; // Import axios for making HTTP requests
 
 const ImpactCalculator = () => {
   const [tripDetails, setTripDetails] = useState({
-    distance: 0,
-    transportationMode: '',
-    accommodationType: '',
-    travelers: 1,
+    consumption: 0,
+    location: '',
   });
-  const [carbonFootprint, setCarbonFootprint] = useState(0);
+  const [carbonFootprint, setCarbonFootprint] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setTripDetails({ ...tripDetails, [name]: value });
   };
 
-  const calculateCarbonFootprint = () => {
-    const { distance, transportationMode, accommodationType, travelers } = tripDetails;
-    let carbonFootprint = distance * 0.1; // Base calculation
-    
-    // Adjust carbon footprint based on transportation mode and accommodation type
-    if (transportationMode === 'car') {
-      carbonFootprint *= 1.2; // Increase carbon footprint for car travel
-    } else if (transportationMode === 'train') {
-      carbonFootprint *= 0.8; // Decrease carbon footprint for train travel
+  const calculateCarbonFootprint = async () => {
+    try {
+      const response = await axios.post(
+        'https://tracker-for-carbon-footprint-api.p.rapidapi.com/traditionalHydro',
+        tripDetails,
+        {
+          headers: {
+            'content-type': 'application/x-www-form-urlencoded',
+            'X-RapidAPI-Key': 'd9677418b2msh740d6cd4752d889p125e87jsn63f0305fadbb',
+            'X-RapidAPI-Host': 'tracker-for-carbon-footprint-api.p.rapidapi.com',
+          },
+        }
+      );
+
+      setCarbonFootprint(response.data);
+    } catch (error) {
+      console.error(error);
     }
-
-    if (accommodationType === 'hotel') {
-      carbonFootprint *= 1.5; // Increase carbon footprint for hotel accommodation
-    } else if (accommodationType === 'camping') {
-      carbonFootprint *= 0.7; // Decrease carbon footprint for camping accommodation
-    }
-
-    // Adjust carbon footprint based on number of travelers
-    carbonFootprint *= travelers;
-
-    setCarbonFootprint(carbonFootprint);
   };
 
   return (
-     <div> 
-  
     <div style={styles.container}>
       <h1 style={styles.title}>Impact Calculator</h1>
-    <div>
-       <label htmlFor="distance">Distance (km):</label>
-       <input type="number" id="distance" name="distance" value={tripDetails.distance} onChange={handleInputChange} />
-    </div>
-    <div>
-       <label htmlFor="transportationMode">Transportation Mode:</label>
-       <input type="text" id="transportationMode" name="transportationMode" value={tripDetails.transportationMode} onChange={handleInputChange} />
-    </div>
-    <div>
-      <label htmlFor="accommodationType">Accommodation Type:</label>
-      <input type="text" id="accommodationType" name="accommodationType" value={tripDetails.accommodationType} onChange={handleInputChange} />
-    </div>
-    <div>
-      <label htmlFor="travelers">Number of Travelers:</label>
-      <input type="number" id="travelers" name="travelers" value={tripDetails.travelers} onChange={handleInputChange} />
-    </div>
-      <button type="button" onClick={calculateCarbonFootprint}>Calculate</button>
-      {carbonFootprint > 0 && <p>Carbon Footprint: {carbonFootprint.toFixed(2)} kg CO2</p>}
-    </div>
+      <div>
+        <label htmlFor="consumption">Consumption:</label>
+        <input
+          type="number"
+          id="consumption"
+          name="consumption"
+          value={tripDetails.consumption}
+          onChange={handleInputChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="location">Location:</label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          value={tripDetails.location}
+          onChange={handleInputChange}
+        />
+      </div>
+      <button type="button" onClick={calculateCarbonFootprint}>
+        Calculate
+      </button>
+      {carbonFootprint !== null && (
+        <p>Carbon Footprint: {carbonFootprint.toFixed(2)} kg CO2</p>
+      )}
     </div>
   );
 };
