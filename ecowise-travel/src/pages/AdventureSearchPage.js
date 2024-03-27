@@ -12,30 +12,30 @@ const adventuresData = [
   },
   {
     id: 2,
-    title: 'Hike the Breathtaking Trails of Turkey',
-    image: 'turkey-hiking.jpg',
+    title: 'Turkey',
+    image: 'goreme-turkey.jpg',
     description: 'Immerse yourself in nature and explore ancient ruins on Turkish hiking trails.',
     rating: 4.0
   },
   {
     id: 3,
-    title: 'Cycle Through Germany\'s Enchanting Forests',
-    image: 'germany-cycling.jpg',
+    title: 'Germany',
+    image: 'rheinhessen-germany.jpg',
     description: 'Experience the beauty of German forests on a scenic cycling adventure.',
     rating: 4.7
   },
   {
     id: 4,
-    title: 'Sustainable Safari in Costa Rica',
-    image: 'costa-rica-safari.jpg',
+    title: 'Costa Rica',
+    image: 'aguirre-costarica.jpg',
     description: 'Encounter diverse wildlife and support conservation efforts on a Costa Rican safari.',
     rating: 4.3
   },
   {
     id: 5,
-    title: 'Kayak the Pristine Waters of Norway',
-    image: 'norway-kayaking.jpg',
-    description: 'Explore Norway\'s stunning fjords and experience the beauty of nature by kayak.',
+    title: 'Norway',
+    image: 'green-norway.jpg',
+    description: 'Explore Norway's stunning fjords and experience the beauty of nature by kayak.',
     rating: 4.8
   },
 ];
