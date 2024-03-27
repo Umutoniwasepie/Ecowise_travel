@@ -1,5 +1,81 @@
 /* Homepage.css */
 
+/* Header Styles */
+.header {
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #336633; /* Eco-friendly green color */
+}
+
+.navigation {
+  display: flex; /* Maintain flex display for navigation links */
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: #336633; /* Eco-friendly green color */
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background-image: url('hero-image.jpg'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff; /* White text color */
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 18px;
+}
+
+/* Search Section Styles */
+.search-section {
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #336633; /* Eco-friendly green color */
+  color: #ffffff; /* White text color */
+  border: none;
+  cursor: pointer;
+}
+
 /* Featured Content Styles */
 .featured-content {
   padding: 40px 20px;
@@ -11,14 +87,20 @@
 }
 
 .featured-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: flex; /* Maintain flex display for card layout */
+  flex-wrap: wrap; /* Wrap cards to two per row */
+  justify-content: space-between; /* Distribute cards evenly */
+  align-items: flex-start; /* Align card tops */
 }
 
 .card {
-  width: calc(50% - 20px); /* Adjust card width for two cards per row */
-  margin-bottom: 40px;
+  width: 45%; /* Adjust card width for two cards per row */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 20px; /* Add spacing between card rows */
 }
 
 .card img {
@@ -26,23 +108,33 @@
   border-radius: 5px;
 }
 
-.card .card-details {
-  padding: 20px;
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+}
+
+/* Footer Styles */
+.footer {
   background-color: #336633; /* Eco-friendly green color */
-  border-radius: 5px;
-}
-
-.card h3, .card p {
   color: #ffffff; /* White text color */
+  padding: 20px;
+  text-align: center;
 }
 
-/* About Me Section Styles */
-.about-me {
-  padding: 40px 20px;
-  background-color: #f5f5f5; /* Light gray background */
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.about-me h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+.footer li {
+  display: inline-block;
+  margin-right: 20px;
 }
+
+.footer li:last-child {
+  margin-right: 0;
