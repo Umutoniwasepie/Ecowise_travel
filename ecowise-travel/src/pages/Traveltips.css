@@ -1,0 +1,32 @@
+.travel-tips-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.tips-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tip {
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: font-size 0.3s ease-in-out;
+}
+
+.tip.selected {
+  font-size: 18px;
+  font-weight: bold;
+}
+
