@@ -1,64 +1,56 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import AdventureCard from './AdventureCard'; // Import AdventureCard component
+import './AdventureSearchPage.css'; // Import CSS file for AdventureSearchPage
 
-const AdventureSearchPage = () => {
-  // Sample adventure data
-  const adventures = [
-    { id: 1, name: 'Adventure 1', location: 'Location 1', rating: 4.5 },
-    { id: 2, name: 'Adventure 2', location: 'Location 2', rating: 4.0 },
-    // Add more adventure data as needed
-  ];
+const adventuresData = [
+  {
+    id: 1,
+    title: 'Explore the Volcanoes of Rwanda',
+    image: 'rwanda-volcanoes.jpg',
+    description: 'Track gorillas in the mist and discover the stunning Rwandan landscape.',
+    rating: 4.5
+  },
+  {
+    id: 2,
+    title: 'Hike the Breathtaking Trails of Turkey',
+    image: 'turkey-hiking.jpg',
+    description: 'Immerse yourself in nature and explore ancient ruins on Turkish hiking trails.',
+    rating: 4.0
+  },
+  {
+    id: 3,
+    title: 'Cycle Through Germany\'s Enchanting Forests',
+    image: 'germany-cycling.jpg',
+    description: 'Experience the beauty of German forests on a scenic cycling adventure.',
+    rating: 4.7
+  },
+  {
+    id: 4,
+    title: 'Sustainable Safari in Costa Rica',
+    image: 'costa-rica-safari.jpg',
+    description: 'Encounter diverse wildlife and support conservation efforts on a Costa Rican safari.',
+    rating: 4.2
+  },
+  {
+    id: 5,
+    title: 'Kayak the Pristine Waters of Norway',
+    image: 'norway-kayaking.jpg',
+    description: 'Explore Norway\'s stunning fjords and experience the beauty of nature by kayak.',
+    rating: 4.8
+  },
+];
 
-  // Render adventures list
-  const renderAdventures = () => {
-    return adventures.map(adventure => (
-      <div key={adventure.id}>
-        <h3>{adventure.name}</h3>
-        <p>Location: {adventure.location}</p>
-        <p>Rating: {adventure.rating}</p>
-      </div>
-    ));
-  };
-
+const AdventuresPage = () => {
   return (
-    <div>
-    
-      {/* Adventure Search Content */}
-      <div style={styles.searchContainer}>
-        <h1 style={styles.title}>Adventure Search</h1>
-        {/* Render adventures */}
-        {renderAdventures()}
+    <div className="adventures-container">
+      <h1>Explore Eco-Friendly Adventures Around the World</h1>
+      <div className="adventure-cards">
+        {adventuresData.map((adventure) => (
+          <AdventureCard key={adventure.id} data={adventure} />
+        ))}
       </div>
     </div>
   );
 };
 
-const styles = {
-  container: {
-    backgroundColor: '#ffffff',
-    padding: '20px',
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  logo: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    color: '#336633',
-  },
-  navigation: {
-    display: 'flex',
-  },
-  searchContainer: {
-    marginTop: '20px',
-  },
-  title: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    marginBottom: '20px',
-  },
-};
-
-export default AdventureSearchPage;
+export default AdventuresPage;
