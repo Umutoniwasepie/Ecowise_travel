@@ -7,17 +7,7 @@ const Homepage = () => {
         <div className="homepage-container">
             {/* Header */}
             <header className="header">
-                <nav className="navigation">
-                    <ul>
-                        <li><Link to="/adventures">Adventures</Link></li>
-                        <li><Link to="/impact-calculator">Impact Calculator</Link></li>
-                        <li><Link to="/travel-tips">Travel Tips</Link></li>
-                        <li><Link to="/community-forum">Community Forum</Link></li>
-                        <li><Link to="/reviews">Review</Link></li>
-                        <li><Link to="/Signin">Sign in</Link></li>
-                        <li><Link to="/Signup">Sign up</Link></li>
-                    </ul>
-                </nav>
+               
             </header>
 
             {/* Hero Section */}
