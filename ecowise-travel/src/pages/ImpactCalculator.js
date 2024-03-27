@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Impactcalculator.css
+import './Impactcalculator.css';
 
 const ImpactCalculator = () => {
   const [tripDetails, setTripDetails] = useState({
