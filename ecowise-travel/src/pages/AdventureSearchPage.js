@@ -35,7 +35,7 @@ const adventuresData = [
     id: 5,
     title: 'Norway',
     image: 'green-norway.jpg',
-    description: 'Explore Norway's stunning fjords and experience the beauty of nature by kayak.',
+    description: 'Explore Norway\'s stunning fjords and experience the beauty of nature by kayak.',
     rating: 4.8
   },
 ];
