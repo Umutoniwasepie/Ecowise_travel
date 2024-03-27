@@ -1,0 +1,9 @@
+.ecowise-title {
+  color: #2e8b57; /* Eco-friendly green color */
+  text-decoration: none; /* Remove underline */
+}
+
+.ecowise-title:hover {
+  color: #38a169; /* Darker green on hover (optional) */
+}
+
