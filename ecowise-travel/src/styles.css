@@ -1,0 +1,54 @@
+/* Body Background */
+body {
+  background-color: #F0F2F5; /* Light grey background */
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff; /* White background for navbar */
+  border-bottom: 1px solid #ddd; /* Light grey border */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #78A03C; /* Darker green for link text */
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd; /* Light grey border for links */
+  border-radius: 4px; /* Rounded corners for frames */
+  margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+  background-color: #EAEAEA; /* Light grey background on hover */
+  color: #9DCD43; /* Lighter green for link text on hover */
+}
+
+/* Headings and Text */
+h1, h2, h3, h4, h5, h6 {
+  color: #333; /* Dark grey for headings */
+}
+
+p {
+  color: #666; /* Lighter grey for paragraph text */
+}
+
+/* Accents */
+.button {
+  background-color: #C2E0CB; /* Light teal background for buttons */
+  color: #fff; /* White text for buttons */
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.highlight {
+  background-color: #EAF2E8; /* Light green background for highlights */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
