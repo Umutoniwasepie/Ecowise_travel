@@ -1,31 +1,57 @@
-import React from "react";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './AuthStyles.css';
 
-export default function Signup() {
+const SignUp = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle sign-up logic (e.g., call API to create user)
+  };
+
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="bg-white p-8 rounded-md shadow-md max-w-md w-full">
-        <form className="flex flex-col space-y-6">
-          <h1 className="text-3xl font-bold underline text-center">
-            Sign Up
-          </h1>
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            className="border border-gray-400 rounded-md p-2"
-          />
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            className="border border-gray-400 rounded-md p-2"
-          />
-          <button className="bg-black text-white rounded-md p-2">Sign Up</button>
-          
-        </form>
-      </div>
+    <div className="auth-container">
+      <form className="auth-form" onSubmit={handleSubmit}>
+        <h1 className="auth-title">Sign Up</h1>
+        <label htmlFor="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="auth-input"
+          required
+        />
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="auth-input"
+          required
+        />
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="auth-input"
+          required
+        />
+        <button type="submit" className="auth-button">
+          Sign Up
+        </button>
+        <p>
+          Already have an account? <Link to="/signin">Sign In</Link>
+        </p>
+      </form>
     </div>
   );
-}
+};
+
+export default SignUp;
