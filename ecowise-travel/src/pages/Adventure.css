@@ -21,7 +21,7 @@
   transform: scale(1.05); /* Increase size on hover */
 }
 
-.adventure-card img {
+.adventure-img {
   width: 300px;
   height: auto;
 }
