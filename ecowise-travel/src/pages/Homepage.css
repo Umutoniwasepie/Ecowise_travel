@@ -122,7 +122,9 @@
   background-color: #336633; /* Eco-friendly green color */
   color: #ffffff; /* White text color */
   padding: 20px;
-  text-align: center;
+  display: flex; /* Display footer content flexibly */
+  justify-content: space-between; /* Distribute content horizontally */
+  align-items: center; /* Align content vertically */
 }
 
 .footer ul {
@@ -138,3 +140,4 @@
 
 .footer li:last-child {
   margin-right: 0;
+}
