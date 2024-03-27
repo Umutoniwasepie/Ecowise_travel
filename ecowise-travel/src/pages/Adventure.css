@@ -35,5 +35,25 @@
 
 .card-content h3 {
   font-size: 20px;
-  margin-bottom: 1
+  margin-bottom: 10px;
+}
 
+.card-content p {
+  font-size: 16px;
+  line-height: 1.5; /* Adjust line spacing for better readability */
+  margin-bottom: 15px;
+}
+
+.card-content button {
+  background-color: #336633; /* Eco-friendly green color */
+  color: #fff; /* White text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.card-content button:hover {
+  background-color: #2e5e2e; /* Darker green on hover */
+}
