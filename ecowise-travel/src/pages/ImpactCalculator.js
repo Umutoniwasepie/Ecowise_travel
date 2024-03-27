@@ -26,7 +26,8 @@ const ImpactCalculator = () => {
           },
         }
       );
-
+      
+      console.log(response.data); 
       setCarbonFootprint(response.data);
     } catch (error) {
       console.error(error);
