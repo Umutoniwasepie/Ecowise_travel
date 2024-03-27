@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import './Traveltips.css';
 
 const TravelTips = () => {
   const [selectedTip, setSelectedTip] = useState(null);
