@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from './ecowise-logo.png'; // Import logo image
+import logo from './logo192.png'; // Import logo image
 
 const Navbar = () => {
   return (
