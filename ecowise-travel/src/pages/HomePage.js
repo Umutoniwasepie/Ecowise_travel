@@ -88,4 +88,6 @@ const Homepage = () => {
    </footer>
   </div>
  );
-}
+};
+
+export default HomePage;
