@@ -10,7 +10,7 @@
 .adventure-card {
   display: flex;
   margin-bottom: 20px;
-  background-color: #9DCD43; /* Eco-friendly green color */
+  background-color: #336633; /* Eco-friendly green color */
   color: #fff; /* Text color */
   border-radius: 10px; /* Rounded corners */
   overflow: hidden; /* Hide overflowing content */
@@ -45,4 +45,5 @@
 
 .rating {
   font-size: 16px;
+  color: #fff; /* Ensure rating text is also white */
 }
