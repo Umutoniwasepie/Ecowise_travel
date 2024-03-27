@@ -5,10 +5,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 400px; /* Set a fixed width for the calculator */
   height: 400px; /* Set a fixed height for a square container */
-  margin: 0 auto; /* Center the container horizontally */
-  position: absolute; /* Make it absolute positioned for vertical centering */
-  top: 50%; /* Position it vertically at 50% of viewport height */
-  transform: translateY(-50%); /* Offset it upwards by half its height to center */
+  margin: 0 auto; /* Removed unnecessary positioning */
 }
 
 .calculator-title {
