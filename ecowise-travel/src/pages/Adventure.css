@@ -10,7 +10,7 @@
 
 .adventure-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust card width and minimum size */
+  grid-template-columns: repeat(2, 1fr); /* Adjust to display two cards per row */
   gap: 20px; /* Gap between cards */
 }
 
