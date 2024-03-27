@@ -1,15 +1,16 @@
-.travel-tips {
+.travel-tips-container {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
   background-color: #f5f5f5;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.tips-title {
+.title {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .tips-list {
@@ -20,11 +21,11 @@
 .tip {
   font-size: 16px;
   margin-bottom: 10px;
-  cursor: pointer; /* Add cursor pointer for hover effect */
-  transition: font-size 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition for hover effects */
+  cursor: pointer;
+  transition: font-size 0.3s ease-in-out;
 }
 
-.tip.active {
-  font-size: 18px; /* Increase font size for active tip */
-  transform: scale(1.05); /* Slightly scale up the active tip */
+.tip.selected {
+  font-size: 18px;
+  font-weight: bold;
 }
