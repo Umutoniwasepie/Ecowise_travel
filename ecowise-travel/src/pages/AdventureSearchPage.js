@@ -22,15 +22,7 @@ const AdventureSearchPage = () => {
 
   return (
     <div>
-      <nav style={styles.navigation}>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/impact-calculator">Impact Calculator</Link></li>
-          <li><Link to="/travel-tips">Travel Tips</Link></li>
-          <li><Link to="/community-forum">Community Forum</Link></li>
-        </ul>
-      </nav>
-
+    
       {/* Adventure Search Content */}
       <div style={styles.searchContainer}>
         <h1 style={styles.title}>Adventure Search</h1>
