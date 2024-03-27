@@ -9,14 +9,12 @@
 }
 
 .adventure-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust card width and minimum size */
   gap: 20px; /* Gap between cards */
 }
 
 .adventure-card {
-  width: 300px; /* Adjust card width as needed */
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -41,18 +39,7 @@
 .card-content p {
   font-size: 16px;
   line-height: 1.5; /* Adjust line spacing for better readability */
-  margin-bottom: 10px;
-}
-
-.rating {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.rating span {
-  font-size: 16px;
+  margin-bottom: 15px;
 }
 
 .card-content button {
