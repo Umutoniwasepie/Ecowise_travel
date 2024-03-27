@@ -27,15 +27,6 @@ const ReviewPage = () => {
 
   return (
      <div> 
-        <nav style={styles.navigation}>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/adventures">Adventures</Link></li>
-            <li><Link to="/impact-calculator">Impact Calculator</Link></li>
-            <li><Link to="/travel-tips">Travel Tips</Link></li>
-            <li><Link to="/community-forum">Community Forum</Link></li>
-          </ul>
-        </nav>
   
     <div style={styles.container}>
       <h1 style={styles.title}>Submit a Review</h1>
