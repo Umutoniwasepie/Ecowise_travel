@@ -1,3 +1,4 @@
+/* Homepage.css */
 /* Header Styles */
 .header {
   background-color: #ffffff; /* White background */
@@ -37,7 +38,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #ffffff; /* White text color */
+  color: #336633; /* Eco-friendly green color */
 }
 
 .hero-section h1 {
@@ -47,24 +48,6 @@
 
 .hero-section p {
   font-size: 18px;
-}
-
-.hero-section::after {  /* Pseudo-element for green image visibility */
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0; /* Initially invisible */
-  transition: opacity 0.5s ease-in-out; /* Smooth transition */
-}
-
-.hero-image.green-image + .hero-section::after {  /* Make visible on green image */
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  color: #fff; /* White text color */
-  padding: 20px;
 }
 
 /* Search Section Styles */
@@ -127,8 +110,9 @@
   margin-bottom: 10px;
 }
 
-.card + p {  /* Select paragraph after each card */
-  margin-top: 10px; /* Add some margin from card */
+.card p {
+  font-size: 16px;
+  margin-top: 10px; /* Added margin to separate paragraph from card */
 }
 
 /* Footer Styles */
@@ -152,22 +136,4 @@
 
 .footer li:last-child {
   margin-right: 0;
-}
-
-.social-media {
-  margin-top: 20px;  /* Add some space between content and social media icons */
-}
-
-.social-media a {
-  margin-right: 10px; /* Add some space between icons */
-  color: inherit; /* Inherit footer text color */
-}
-
-.social-media a:hover {
-  opacity: 0.7; /* Slight transparency on hover */
-  transition: opacity 0.3s ease-in-out; /* Smooth transition */
-}
-
-.copyright {
-  margin-top: 20px;  /* Add some space between social media and copyright */
 }
