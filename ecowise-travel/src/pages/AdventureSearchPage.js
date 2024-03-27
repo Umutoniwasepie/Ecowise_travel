@@ -1,6 +1,6 @@
 import React from 'react';
 import AdventureCard from './AdventureCard'; // Import AdventureCard component
-import './AdventureSearchPage.css'; // Import CSS file for AdventureSearchPage
+import './Adventure.css'; // Import CSS file for AdventureSearchPage
 
 const adventuresData = [
   {
