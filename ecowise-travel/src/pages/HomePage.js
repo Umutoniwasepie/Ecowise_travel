@@ -1,3 +1,4 @@
+// Homepage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css'; // Import CSS file for styling
@@ -38,21 +39,33 @@ const Homepage = () => {
           {/* Add cards or tiles showcasing featured destinations, tips, or testimonials */}
           <div className="card">
             <img src="featured-image1.jpg" alt=" " />
-            <h3>Featured Destination 1</h3>
-            <p>Description of the destination...</p>
+            <div className="card-details">
+              <h3>Featured Destination 1</h3>
+              <p>Description of the destination...</p>
+            </div>
           </div>
           <div className="card">
             <img src="featured-image2.jpg" alt=" " />
-            <h3>Featured Destination 2</h3>
-            <p>Rwanda – Your next luxury eco-tourism destination.</p>
+            <div className="card-details">
+              <h3>Featured Destination 2</h3>
+              <p>Rwanda – Your next luxury eco-tourism destination.</p>
+            </div>
           </div>
           {/* Add more cards as needed */}
           <div className="card">
             <img src="featured-image3.jpg" alt="Featured Destination 3" />
-            <h3>Featured Destination 3</h3>
-            <p>Description of the destination...</p>
+            <div className="card-details">
+              <h3>Featured Destination 3</h3>
+              <p>Description of the destination...</p>
+            </div>
           </div>
         </div>
+      </section>
+
+      {/* About Me Section */}
+      <section className="about-me">
+        <h2>About Me</h2>
+        <p>I'm passionate about travel and environmental conservation. EcoWise Travel is my way of sharing my love for exploring the world while also advocating for sustainability and responsible tourism. Join me on this journey to make a positive impact!</p>
       </section>
 
       {/* Footer */}
@@ -78,4 +91,4 @@ const Homepage = () => {
   );
 }
 
-export default Homepage;  
+export default Homepage;
