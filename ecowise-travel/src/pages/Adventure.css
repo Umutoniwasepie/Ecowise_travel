@@ -5,29 +5,20 @@
 .adventures-container h1 {
   font-size: 28px;
   margin-bottom: 20px;
-  text-align: center;
-}
-
-.adventure-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Adjust to display two cards per row */
-  gap: 20px; /* Gap between cards */
 }
 
 .adventure-card {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  overflow: hidden; /* Prevent image overflow */
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .adventure-card img {
-  width: 100%;
-  height: 180px; /* Adjust image height as needed */
-  object-fit: cover; /* Crop image to fit within container */
+  width: 300px;
+  height: auto;
 }
 
 .card-content {
+  flex-grow: 1;
   padding: 20px;
 }
 
@@ -38,20 +29,10 @@
 
 .card-content p {
   font-size: 16px;
-  line-height: 1.5; /* Adjust line spacing for better readability */
-  margin-bottom: 15px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
-.card-content button {
-  background-color: #336633; /* Eco-friendly green color */
-  color: #fff; /* White text color */
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
-}
-
-.card-content button:hover {
-  background-color: #2e5e2e; /* Darker green on hover */
+.rating {
+  font-size: 16px;
 }
