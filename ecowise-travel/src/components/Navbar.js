@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">
         <Link to="/">
-          <img src="./ecowise-logo.png" alt="EcoWise Travel Logo" /> {/* Assuming logo.png is in the same directory */}
+          <img src="./ecowise-logo.png" alt=" " /> {/* Assuming logo.png is in the same directory */}
           <span className="ecowise-title">EcoWise Travel</span> {/* Green title without underline */}
         </Link>
       </div>
