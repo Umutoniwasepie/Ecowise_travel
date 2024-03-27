@@ -29,7 +29,7 @@ const adventuresData = [
     title: 'Sustainable Safari in Costa Rica',
     image: 'costa-rica-safari.jpg',
     description: 'Encounter diverse wildlife and support conservation efforts on a Costa Rican safari.',
-    rating: 4.2
+    rating: 4.3
   },
   {
     id: 5,
@@ -46,7 +46,14 @@ const AdventuresPage = () => {
       <h1>Explore Eco-Friendly Adventures Around the World</h1>
       <div className="adventure-cards">
         {adventuresData.map((adventure) => (
-          <AdventureCard key={adventure.id} data={adventure} />
+          <div key={adventure.id} className="adventure-card">
+            <img src={adventure.image} alt={adventure.title} className="adventure-image" />
+            <div className="adventure-details">
+              <h3>{adventure.title}</h3>
+              <p>{adventure.description}</p>
+              <p>Rating: {adventure.rating}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
