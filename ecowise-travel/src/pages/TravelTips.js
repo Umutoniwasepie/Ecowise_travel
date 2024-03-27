@@ -13,15 +13,7 @@ const TravelTips = () => {
 
   return (
      <div>
-        <nav style={styles.navigation}>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-              <li><Link to="/adventures">Adventures</Link></li>
-            <li><Link to="/impact-calculator">Impact Calculator</Link></li>
-            <li><Link to="/community-forum">Community Forum</Link></li>
-          </ul>
-        </nav>
-  
+    
     <div style={styles.container}>
       <h1 style={styles.title}>Travel Tips</h1>
       <ul style={styles.tipsList}>
