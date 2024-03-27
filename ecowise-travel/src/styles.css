@@ -27,15 +27,6 @@ body {
   color: #9DCD43; /* Lighter green for link text on hover */
 }
 
-/* Headings and Text */
-h1, h2, h3, h4, h5, h6 {
-  color: #333; /* Dark grey for headings */
-}
-
-p {
-  color: #666; /* white for paragraph text */
-}
-
 /* Accents */
 .button {
   background-color: #C2E0CB; /* Light teal background for buttons */
