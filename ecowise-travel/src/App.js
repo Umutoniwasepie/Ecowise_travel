@@ -12,6 +12,7 @@ import TravelTips from './pages/TravelTips';
 import CommunityForum from './pages/CommunityForum';
 import ReviewPage from './pages/ReviewPage';
 import './App.css';
+import './styles.css';
 
 function App() {
   return (
