@@ -86,20 +86,20 @@
 }
 
 .featured-cards {
-  display: flex; /* Maintain flex display for card layout */
-  flex-wrap: wrap; /* Wrap cards to two per row */
-  justify-content: space-between; /* Distribute cards evenly */
-  align-items: flex-start; /* Align card tops */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .card {
-  width: 45%; /* Adjust card width for two cards per row */
+  width: 48%; /* Adjust card width for two cards per row */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  margin-bottom: 20px; /* Add spacing between card rows */
+  margin-bottom: 20px;
 }
 
 .card img {
@@ -114,16 +114,17 @@
 
 .card p {
   font-size: 16px;
+  margin-bottom: 10px; /* Add spacing between title and description */
 }
 
 /* Footer Styles */
 .footer {
-  background-color: #336633; /* Eco-friendly green color */
-  color: #ffffff; /* White text color */
+  background-color: #336633;
+  color: #ffffff;
   padding: 20px;
-  display: flex; /* Display footer content flexibly */
-  justify-content: space-between; /* Distribute content horizontally */
-  align-items: center; /* Align content vertically */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer ul {
