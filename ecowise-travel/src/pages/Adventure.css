@@ -29,6 +29,7 @@
   border-radius: 10px; /* Rounded corners */
   overflow: hidden; /* Hide overflowing content */
   transition: transform 0.3s ease; /* Transition for hover effect */
+  display: flex; /* Use flexbox to align image and details */
 }
 
 .adventure-card:hover {
@@ -36,9 +37,9 @@
 }
 
 .adventure-image {
-  width: 100%; /* Set image width to 100% */
+  width: 45%; /* Set image width to 100% */
   height: auto; /* Maintain aspect ratio */
-  max-width: 400px; /* Limit maximum width */
+  max-width: 250px; /* Limit maximum width */
   background-size: cover; /* Ensure the background image covers the container */
   background-position: center; /* Center the background image */
 }
