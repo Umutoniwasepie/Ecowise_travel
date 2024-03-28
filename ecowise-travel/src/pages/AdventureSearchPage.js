@@ -1,6 +1,6 @@
 import React from 'react';
 import './Adventure.css'; // Import CSS file for AdventureSearchPage
-import Footer from './Footer'; // Import Footer component
+import Footer from '../components/Footer'; // Import Footer component
 
 const adventuresData = [
   {
