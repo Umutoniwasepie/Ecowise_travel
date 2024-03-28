@@ -20,7 +20,7 @@
 }
 
 .adventure-card {
-  width: 92%; /* Adjust the width of the card */
+  width: 95%; /* Adjust the width of the card */
   height: 400px; /* Adjust the height of the card */
   display: flex;
   margin-bottom: 20px;
@@ -37,10 +37,15 @@
 }
 
 .adventure-image {
-  width: 100%; /* Set image container width */
+  width: 70%; /* Set image container width */
   height: 100%;
   object-fit: cover; /* Ensure the image covers the entire container */
   border-radius: 10px 0 0 10px; /* Apply border radius to left side of image container */
+}
+
+.adventure-image img {
+  /* Add this line */
+  object-fit: cover;
 }
 
 .adventure-details {
