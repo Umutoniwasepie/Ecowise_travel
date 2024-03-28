@@ -1,6 +1,5 @@
 import React from 'react';
 import './Adventure.css'; // Import CSS file for AdventureSearchPage
-import Footer from '../components/Footer'; // Import Footer component
 
 const adventuresData = [
   {
@@ -58,7 +57,6 @@ const AdventuresPage = () => {
           ))}
         </div>
       </div>
-      <Footer /> {/* Include the Footer component */}
     </div>
   );
 };
