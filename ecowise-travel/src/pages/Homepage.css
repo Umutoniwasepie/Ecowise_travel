@@ -141,3 +141,31 @@
 .footer li:last-child {
   margin-right: 0;
 }
+
+/* Image Path Options */
+.featured-cards:nth-child(1) .card {
+  background-image: url('./featured-image1.jpg'); /* Assuming images are in the same folder */
+}
+
+.featured-cards:nth-child(2) .card {
+  background-image: url('./featured-image2.jpg');
+}
+
+.featured-cards:nth-child(3) .card {
+  background-image: url('./jaco-costarica.jpg');
+}
+
+
+/* Fallback for Missing Images */
+.card {
+  background-color: #ddd; /* Light gray background if image is missing */
+}
+
+.card.no-image {
+  display: none; /* Hide the image container if image is missing */
+}
+
+/* Add a class 'no-image' to the adventure-image element if the image fails to load */
+.card img {
+  display: none; /* Hide the image if there's an error loading */
+}
