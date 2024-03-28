@@ -21,7 +21,7 @@
   transform: scale(1.05); /* Increase size on hover */
 }
 
-.adventure-img {
+.adventure-card .adventure-image {
   width: 300px;
   height: auto;
 }
@@ -51,4 +51,25 @@
 .rating {
   font-size: 16px;
   color: #fff; /* Ensure rating text is also white */
+}
+
+/* Image URLs */
+.adventure-card:nth-child(1) .adventure-image {
+  background-image: url('mariott-rwanda.jpg');
+}
+
+.adventure-card:nth-child(2) .adventure-image {
+  background-image: url('goreme-turkey.jpg');
+}
+
+.adventure-card:nth-child(3) .adventure-image {
+  background-image: url('rheinhessen-germany.jpg');
+}
+
+.adventure-card:nth-child(4) .adventure-image {
+  background-image: url('aguirre-costarica.jpg');
+}
+
+.adventure-card:nth-child(5) .adventure-image {
+  background-image: url('green-norway.jpg');
 }
