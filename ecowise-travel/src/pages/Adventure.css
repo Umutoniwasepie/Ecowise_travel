@@ -1,3 +1,12 @@
+.adventures-container {
+  padding: 20px;
+}
+
+.adventures-container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
 .adventure-card {
   display: flex;
   margin-bottom: 20px;
@@ -12,34 +21,79 @@
   transform: scale(1.05); /* Increase size on hover */
 }
 
-.adventure-card .adventure-image {
-  width: 300px; /* Adjust width as needed */
+.adventure-image {
+  width: 300px;
   height: auto;
 }
 
-.adventure-card .adventure-details {
+.card-content {
   flex-grow: 1;
   padding: 20px;
 }
 
-.adventure-card .adventure-details h3,
-.adventure-card .adventure-details p,
-.adventure-card .adventure-details .rating {
+.card-content h3,
+.card-content p,
+.rating {
   color: #fff; /* White text color */
 }
 
-.adventure-card .adventure-details h3 {
+.card-content h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.adventure-card .adventure-details p {
+.card-content p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 10px;
 }
 
-.adventure-card .adventure-details .rating {
+.rating {
   font-size: 16px;
   color: #fff; /* Ensure rating text is also white */
+}
+
+/* Image Path Options */
+.adventure-card {
+  background-image: url('./mariott-rwanda.jpg'); /* Assuming images is in same folder */
+}
+
+/* Alternative: If images are in the same directory as Adventure.css */
+/*
+.adventure-card {
+  background-image: url('rwanda-volcanoes.jpg'); /* Update image names as needed */
+}
+*/
+
+/* Fallback for Missing Images */
+.adventure-card {
+  background-color: #ddd; /* Light gray background if image is missing */
+}
+
+.adventure-card.no-image .adventure-image {
+  display: none; /* Hide the image container if image is missing */
+}
+
+/* Add a class 'no-image' to the card element if the image fails to load */
+.adventure-card img {
+  object-fit: cover; /* Ensure image covers the background area */
+  width: 100%; /* Stretch image to fill container width */
+  height: 100%; /* Stretch image to fill container height */
+  opacity: 0.8; /* Set a slight transparency on the image */
+  transition: opacity 0.3s ease; /* Smooth transition on hover */
+}
+
+.adventure-card:hover img {
+  opacity: 1; /* Increase opacity on hover */
+}
+
+.adventure-card img.error {
+  display: none; /* Hide the image if there's an error loading */
+}
+
+/* Add an error class 'error' to the image element on error */
+.adventure-card img {
+  /* ... other styles ... */
+  /* Add error handling using JavaScript (optional) */
+  /* Example: img.onerror = function() { this.classList.add('error'); }; */
 }
