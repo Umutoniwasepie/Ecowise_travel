@@ -1,10 +1,10 @@
 
 /* Button Styles */
 .review-button {
-  background-color: #336633; /* Eco-friendly green color */
+  background-color: #2A4236; /* Eco-friendly grEY color */
   color: #fff; /* White text color */
   padding: 10px 20px;
-  border: 2px solid #336633; /* Add border */
+  border: 2px solid #2A4236; /* Add border */
   border-radius: 5px; /* Rounded corners */
   cursor: pointer;
   transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
