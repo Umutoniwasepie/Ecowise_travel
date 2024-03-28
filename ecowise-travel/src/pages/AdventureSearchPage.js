@@ -42,20 +42,20 @@ const adventuresData = [
 const AdventuresPage = () => {
   return (
     <div className="adventures-container">
-      <h1>Explore Eco-Friendly Adventures Around the World</h1>
-      <div className="adventure-cards">
-        {adventuresData.map((adventure) => (
-          <div key={adventure.id} className="adventure-card">
-            <div className="adventure-image" style={{ backgroundImage: `url(${adventure.image})` }}></div>
-            <div className="adventure-details">
-              <h3>{adventure.title}</h3>
-              <p>{adventure.description}</p>
-              <p>Rating: {adventure.rating}</p>
-            </div>
-          </div>
-        ))}
+  <h1>Explore Eco-Friendly Adventures Around the World</h1>
+  <div className="adventure-cards">
+    {adventuresData.map((adventure) => (
+      <div key={adventure.id} className="adventure-card">
+        <img src={adventure.image} alt={adventure.title} className="adventure-image" />
+        <div className="adventure-details">
+          <h3>{adventure.title}</h3>
+          <p>{adventure.description}</p>
+          <p>Rating: {adventure.rating}</p>
+        </div>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
   );
 };
 
