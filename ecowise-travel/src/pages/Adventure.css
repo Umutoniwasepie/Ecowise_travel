@@ -1,12 +1,3 @@
-.adventures-container {
-  padding: 20px;
-}
-
-.adventures-container h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
 .adventure-card {
   display: flex;
   margin-bottom: 20px;
@@ -22,27 +13,26 @@
 }
 
 .adventure-image {
-  width: 300px;
-  height: auto;
+  width: 40%; /* Adjust the width of the image container */
 }
 
-.card-content {
+.adventure-details {
   flex-grow: 1;
   padding: 20px;
 }
 
-.card-content h3,
-.card-content p,
+.adventure-details h3,
+.adventure-details p,
 .rating {
   color: #fff; /* White text color */
 }
 
-.card-content h3 {
+.adventure-details h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.card-content p {
+.adventure-details p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 10px;
@@ -50,48 +40,39 @@
 
 .rating {
   font-size: 16px;
-  color: #fff; /* Ensure rating text is also white */
 }
 
 /* Image Path Options */
-.adventure-card {
-  background-image: url('./mariott-rwanda.jpg'); /* Assuming images is in same folder */
+.adventure-card:nth-child(1) .adventure-image {
+  background-image: url('./mariott-rwanda.jpg'); /* Assuming images are in the same folder */
 }
 
-/* Alternative: If images are in the same directory as Adventure.css */
-/*
-.adventure-card {
-  background-image: url('rwanda-volcanoes.jpg'); /* Update image names as needed */
+.adventure-card:nth-child(2) .adventure-image {
+  background-image: url('./goreme-turkey.jpg');
+}
+
+.adventure-card:nth-child(3) .adventure-image {
+  background-image: url('./rheinhessen-germany.jpg');
+}
+
+.adventure-card:nth-child(4) .adventure-image {
+  background-image: url('./aguirre-costarica.jpg');
+}
+
+.adventure-card:nth-child(5) .adventure-image {
+  background-image: url('./green-norway.jpg');
+}
 
 /* Fallback for Missing Images */
-.adventure-card {
+.adventure-image {
   background-color: #ddd; /* Light gray background if image is missing */
 }
 
-.adventure-card.no-image .adventure-image {
+.adventure-image.no-image {
   display: none; /* Hide the image container if image is missing */
 }
 
-/* Add a class 'no-image' to the card element if the image fails to load */
-.adventure-card img {
-  object-fit: cover; /* Ensure image covers the background area */
-  width: 100%; /* Stretch image to fill container width */
-  height: 100%; /* Stretch image to fill container height */
-  opacity: 0.8; /* Set a slight transparency on the image */
-  transition: opacity 0.3s ease; /* Smooth transition on hover */
-}
-
-.adventure-card:hover img {
-  opacity: 1; /* Increase opacity on hover */
-}
-
-.adventure-card img.error {
+/* Add a class 'no-image' to the adventure-image element if the image fails to load */
+.adventure-image img {
   display: none; /* Hide the image if there's an error loading */
-}
-
-/* Add an error class 'error' to the image element on error */
-.adventure-card img {
-  /* ... other styles ... */
-  /* Add error handling using JavaScript (optional) */
-  /* Example: img.onerror = function() { this.classList.add('error'); }; */
 }
