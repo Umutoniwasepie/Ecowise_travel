@@ -4,7 +4,7 @@
 
 .adventure-card {
   width: 90%; /* Adjust the width of the card */
-  height: 300px; /* Adjust the height of the card */
+  height: 400px; /* Adjust the height of the card */
   display: flex;
   margin-bottom: 20px;
   background-color: #336633; /* Eco-friendly green color */
@@ -19,7 +19,7 @@
 }
 
 .adventure-image {
-  width: 40%; /* Adjust the width of the image container */
+  width: 45%; /* Adjust the width of the image container */
   background-size: cover; /* Ensure the background image covers the container */
   background-position: center; /* Center the background image */
 }
