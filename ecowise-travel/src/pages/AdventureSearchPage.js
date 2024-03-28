@@ -4,36 +4,36 @@ import './Adventure.css'; // Import CSS file for AdventureSearchPage
 const adventuresData = [
   {
     id: 1,
-    title: 'Explore the Volcanoes of Rwanda',
-    image: 'https://example.com/image1.jpg',
+    title: 'Rwanda',
+    image: 'mariott-rwanda.jpg',
     description: 'Track gorillas in the mist and discover the stunning Rwandan landscape.',
-    rating: 4.5
+    rating: 4.7
   },
   {
     id: 2,
     title: 'Turkey',
-    image: 'https://example.com/image2.jpg',
+    image: 'goreme-turkey.jpg',
     description: 'Immerse yourself in nature and explore ancient ruins on Turkish hiking trails.',
-    rating: 4.0
+    rating: 4.2
   },
   {
     id: 3,
     title: 'Germany',
-    image: 'https://example.com/image3.jpg',
+    image: 'rheinhessen-germany.jpg',
     description: 'Experience the beauty of German forests on a scenic cycling adventure.',
-    rating: 4.7
+    rating: 4.6
   },
   {
     id: 4,
     title: 'Costa Rica',
-    image: 'https://example.com/image4.jpg',
+    image: 'aguirre-costarica.jpg',
     description: 'Encounter diverse wildlife and support conservation efforts on a Costa Rican safari.',
-    rating: 4.3
+    rating: 4.4
   },
   {
     id: 5,
     title: 'Norway',
-    image: 'https://example.com/image5.jpg',
+    image: 'green-norway.jpg',
     description: 'Explore Norway\'s stunning fjords and experience the beauty of nature by kayak.',
     rating: 4.8
   },
