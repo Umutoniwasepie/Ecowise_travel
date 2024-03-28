@@ -29,7 +29,6 @@
   border-radius: 10px; /* Rounded corners */
   overflow: hidden; /* Hide overflowing content */
   transition: transform 0.3s ease; /* Transition for hover effect */
-  display: flex; /* Use flexbox to align image and details */
 }
 
 .adventure-card:hover {
@@ -37,15 +36,8 @@
 }
 
 .adventure-image {
-  width: 70%; /* Set image container width */
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the entire container */
-  border-radius: 10px 0 0 10px; /* Apply border radius to left side of image container */
-}
-
-.adventure-image img {
-  /* Add this line */
-  object-fit: cover;
+  width: 300px;
+  height: auto;
 }
 
 .adventure-details {
