@@ -29,7 +29,6 @@
   border-radius: 10px; /* Rounded corners */
   overflow: hidden; /* Hide overflowing content */
   transition: transform 0.3s ease; /* Transition for hover effect */
-  display: flex; /* Use flexbox to align image and details */
 }
 
 .adventure-card:hover {
@@ -37,15 +36,13 @@
 }
 
 .adventure-image {
-  width: 100%; /* Set image width to 100% */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 300px; /* Limit maximum width */
-  background-size: cover; /* Ensure the background image covers the container */
-  background-position: center; /* Center the background image */
+  width: 50%; /* Set image container width */
+  height: auto;
+  border-radius: 10px 0 0 10px; /* Apply border radius to left side of image container */
 }
 
 .adventure-details {
-  flex-grow: 1;
+  width: 50%; /* Set details container width */
   padding: 20px;
 }
 
