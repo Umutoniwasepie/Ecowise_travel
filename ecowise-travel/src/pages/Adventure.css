@@ -7,6 +7,7 @@
   border: 2px solid #2A4236; /* Add border */
   border-radius: 5px; /* Rounded corners */
   cursor: pointer;
+  bottom: 10px; /* Adjust vertical position */
   transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
 }
 
