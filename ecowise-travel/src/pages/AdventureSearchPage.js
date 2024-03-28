@@ -1,5 +1,6 @@
 import React from 'react';
 import './Adventure.css'; // Import CSS file for AdventureSearchPage
+import Footer from './Footer'; // Import Footer component
 
 const adventuresData = [
   {
@@ -41,21 +42,24 @@ const adventuresData = [
 
 const AdventuresPage = () => {
   return (
-    <div className="adventures-container">
-  <h1>Explore Eco-Friendly Adventures Around the World</h1>
-  <div className="adventure-cards">
-    {adventuresData.map((adventure) => (
-      <div key={adventure.id} className="adventure-card">
-        <img src={adventure.image} alt={adventure.title} className="adventure-image" />
-        <div className="adventure-details">
-          <h3>{adventure.title}</h3>
-          <p>{adventure.description}</p>
-          <p>Rating: {adventure.rating}</p>
+    <div>
+      <div className="adventures-container">
+        <h1>Explore Eco-Friendly Adventures Around the World</h1>
+        <div className="adventure-cards">
+          {adventuresData.map((adventure) => (
+            <div key={adventure.id} className="adventure-card">
+              <img src={adventure.image} alt={adventure.title} className="adventure-image" />
+              <div className="adventure-details">
+                <h3>{adventure.title}</h3>
+                <p>{adventure.description}</p>
+                <p>Rating: {adventure.rating}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    ))}
-  </div>
-</div>
+      <Footer /> {/* Include the Footer component */}
+    </div>
   );
 };
 
