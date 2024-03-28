@@ -50,7 +50,7 @@ const Homepage = () => {
           </div>
           {/* Add more cards as needed */}
           <div className="card">
-            <img src="featured-image3.jpg" alt="Featured Destination 3" />
+            <img src="jaco-costarica.jpg" alt="Featured Destination 3" />
             <h3>Featured Destination 3</h3>
             <p>Description of the destination...</p>
             <p>A paragraph about the destination goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt. Quisque vulputate, libero eget consectetur interdum, metus quam scelerisque justo, a luctus velit sapien ut nunc.</p>
