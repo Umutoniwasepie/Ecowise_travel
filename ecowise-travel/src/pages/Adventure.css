@@ -1,5 +1,11 @@
+.adventures-container {
+  padding: 20px;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center items horizontally */
+}
+
 .adventure-card {
-  width: 75%; /* Adjust the width of the card */
+  width: 80%; /* Adjust the width of the card */
   height: 300px; /* Adjust the height of the card */
   display: flex;
   margin-bottom: 20px;
