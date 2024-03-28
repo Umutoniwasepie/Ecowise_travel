@@ -37,7 +37,8 @@
 
 .adventure-image {
   width: 50%; /* Set image container width */
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
   border-radius: 10px 0 0 10px; /* Apply border radius to left side of image container */
 }
 
