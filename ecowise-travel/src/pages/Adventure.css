@@ -20,7 +20,7 @@
 }
 
 .adventure-card {
-  width: 60%; /* Adjust the width of the card */
+  width: 92%; /* Adjust the width of the card */
   height: 400px; /* Adjust the height of the card */
   display: flex;
   margin-bottom: 20px;
@@ -39,7 +39,7 @@
 .adventure-image {
   width: 60%; /* Set image width to 100% */
   height: auto; /* Maintain aspect ratio */
-  max-width: 250px; /* Limit maximum width */
+  max-width: 300px; /* Limit maximum width */
   background-size: cover; /* Ensure the background image covers the container */
   background-position: center; /* Center the background image */
 }
