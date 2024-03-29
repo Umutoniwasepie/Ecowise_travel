@@ -162,3 +162,16 @@
 .card img {
   display: none; /* Hide the image if there's an error loading */
 }
+
+/* Image URLs for HomePage.js */
+.card:nth-child(1) img {
+  content: url('featured-image1.jpg');
+}
+
+.card:nth-child(2) img {
+  content: url('featured-image2.jpg');
+}
+
+.card:nth-child(3) img {
+  content: url('jaco-costarica.jpg');
+}
