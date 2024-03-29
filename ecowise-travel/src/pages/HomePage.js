@@ -1,8 +1,20 @@
 import React from 'react';
+import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import './Homepage.css'; // Import CSS file for styling
 
 const Homepage = () => {
+  const heroSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+  };
+
   return (
     <div className="homepage-container">
       {/* Header */}
@@ -12,12 +24,20 @@ const Homepage = () => {
 
       {/* Hero Section */}
       <section className="hero-section">
+        <Slider {...heroSettings}>
+          <div>
+            <img src="hero-image1.jpg" alt=" " />
+          </div>
+          <div>
+            <img src="hero-image2.jpg" alt=" " />
+          </div>
+          <div>
+            <img src="hero-image3.jpg" alt=" " />
+          </div>
+        </Slider>
         <div className="hero-content">
           <h1>Explore the World Responsibly</h1>
           <p>Discover eco-friendly adventures and make a positive impact on the environment.</p>
-        </div>
-        <div className="hero-image">
-          <img src="hero-image.jpg" alt=" " />
         </div>
       </section>
 
