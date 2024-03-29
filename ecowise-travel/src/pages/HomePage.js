@@ -13,8 +13,6 @@ const Homepage = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
-    prevArrow: <CustomPrevArrow />, // Custom previous arrow component
-    nextArrow: <CustomNextArrow />, // Custom next arrow component
     responsive: [
       {
         breakpoint: 768, // Adjust breakpoints as needed
