@@ -3,14 +3,14 @@
 /* Header Styles */
 .header {
   background-color: #ffffff; /* White background */
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   color: #336633; /* Eco-friendly green color */
 }
@@ -32,7 +32,7 @@
 .hero-section {
   background-size: cover;
   background-position: center;
-  height: 500px; /* Adjust height as needed */
+  height: 550px; /* Adjust height as needed */
   display: flex;
   flex-direction: column;
   justify-content: center;
