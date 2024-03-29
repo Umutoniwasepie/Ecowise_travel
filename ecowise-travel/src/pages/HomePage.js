@@ -3,38 +3,24 @@ import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import './Homepage.css'; // Import CSS file for styling
 
-// Custom previous arrow component
-const CustomPrevArrow = (props) => <button {...props} className="prev-slide">&#10094;</button>;
-
-// Custom next arrow component
-const CustomNextArrow = (props) => <button {...props} className="next-slide">&#10095;</button>;
-
 const Homepage = () => {
   const heroSettings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Show three slides at a time
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
-    prevArrow: <CustomPrevArrow />, // Custom previous arrow component
-    nextArrow: <CustomNextArrow />, // Custom next arrow component
-    responsive: [
-      {
-        breakpoint: 768, // Adjust breakpoints as needed
-        settings: {
-          slidesToShow: 1, // Show one slide at a time on smaller screens
-        }
-      }
-    ]
   };
 
   return (
     <div className="homepage-container">
       {/* Header */}
-      <header className="header"></header>
+      <header className="header">
+        
+      </header>
 
       {/* Hero Section */}
       <section className="hero-section">
