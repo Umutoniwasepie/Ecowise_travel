@@ -138,7 +138,6 @@
 .about-me {
   padding: 40px 20px; /* Adjust padding as needed */
   display: flex;
-  justify-content: flex-end; /* Align content to the right */
   align-items: center; /* Vertically align content */
 }
 
