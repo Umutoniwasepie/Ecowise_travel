@@ -1,7 +1,6 @@
-// Footer.js
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import for navigation links
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import here
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Assuming Font Awesome is imported centrally
 
 const Footer = () => {
   const year = new Date().getFullYear(); // Get current year dynamically
@@ -9,41 +8,39 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div className="copyright">
-          <p>&copy; {year} EcoWise Travel</p>
-        </div>
         <nav className="footer-nav">
-          <ul>
+          {/* Navigation links on the left */}
+          <ul className="navigation-links">
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/Signup">Sign up</Link>
+              <Link to="/signin">Sign In</Link>
             </li>
-    <br></br>
-    <br></br>
             <li>
-              <Link to="/Signin">Sign in</Link>
+              <Link to="/signup">Sign Up</Link>
             </li>
-            {/* Add more links as needed */}
           </ul>
         </nav>
-        <div className="social-media"> {/* Optional: Add social media icons */}
-          {/* Replace with your social media links (e.g., Facebook, Instagram) */}
+        <div className="copyright">
+          {/* Copyright on the bottom */}
+          <p>&copy; {year} EcoWise Travel</p>
+        </div>
+        <nav className="social-media">
+          {/* Social media links on the right */}
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noreferrer noopener">
-                <FontAwesomeIcon icon="fab fa-linkedin" /> LinkedIn
+              <a href="https://www.linkedin.com/in/pierrette-umutoniwase/" target="_blank" rel="noreferrer noopener">
+                <FontAwesomeIcon icon="fab fa-linkedin" />
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/your-instagram-handle" target="_blank" rel="noreferrer noopener">
-                <FontAwesomeIcon icon="fab fa-instagram" /> Instagram
+                <FontAwesomeIcon icon="fab fa-instagram" />
               </a>
             </li>
           </ul>
-          {/* Add more social media icons as needed */}
-        </div>
+        </nav>
       </div>
     </footer>
   );
