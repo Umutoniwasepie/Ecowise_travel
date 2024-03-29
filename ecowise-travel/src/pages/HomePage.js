@@ -64,8 +64,10 @@ const Homepage = () => {
       {/* About Me Section */}
      <section className="about-me">
       <h2>About Me</h2>
-       <div className="about-content">
-        <img src="pie.jpg" alt="U.P- About Me" class="about-image" />
+       <div className="about">
+         <div className="about-image">
+         </div>
+         <div className="about-content">
          <p>
           Hi there! My name is Pierrette U, and I'm passionate about travel and
           environmental responsibility. I believe that exploring the world
@@ -74,6 +76,7 @@ const Homepage = () => {
           destinations while making sustainable choices. 
         </p>
        </div>
+      </div>
      </section>
 
       {/* Footer */}
