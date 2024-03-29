@@ -20,7 +20,8 @@ const Footer = () => {
             <li>
               <Link to="/signup">Sign up</Link>
             </li>
-    <br><br>
+    <br></br>
+    <br></br>
             <li>
               <Link to="/signin">Sign in</Link>
             </li>
