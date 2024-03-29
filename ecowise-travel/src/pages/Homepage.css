@@ -1,4 +1,5 @@
 /* Homepage.css */
+
 /* Header Styles */
 .header {
   background-color: #ffffff; /* White background */
@@ -161,17 +162,4 @@
 /* Add a class 'no-image' to the adventure-image element if the image fails to load */
 .card img {
   display: none; /* Hide the image if there's an error loading */
-}
-
-/* Image URLs for HomePage.js */
-.card:nth-child(1) img {
-  content: url('featured-image1.jpg');
-}
-
-.card:nth-child(2) img {
-  content: url('featured-image2.jpg');
-}
-
-.card:nth-child(3) img {
-  content: url('jaco-costarica.jpg');
 }
