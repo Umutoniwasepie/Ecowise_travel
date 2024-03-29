@@ -92,7 +92,7 @@ const Homepage = () => {
         <div className="footer-links">
           <ul>
             <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/ContactForm">Contact Us</Link></li>
+            <li><Link to="/contact-form">Contact Us</Link></li>
             <li><Link to="/privacy-policy">Privacy Policy</Link></li>
           </ul>
         </div>
