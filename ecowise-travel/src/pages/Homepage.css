@@ -42,29 +42,11 @@
   animation: slideshow 15s infinite; /* Adjust timing as needed */
 }
 
-/* Slider Styles */
-.slick-prev, .slick-next {
-  position: absolute;
-  bottom: 20px; /* Adjust vertical position */
-  width: 40px; /* Adjust arrow width */
-  height: 40px; /* Adjust arrow height */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  border: none;
-  border-radius: 50%; /* Rounded corners */
-  color: #fff; /* Arrow color */
-  font-size: 24px; /* Arrow size */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.slick-prev {
-  left: 20px; /* Position the previous arrow on the left */
-}
-
-.slick-next {
-  right: 20px; /* Position the next arrow on the right */
+@keyframes slideshow {
+  0% { background-image: url('hero-image1.jpg'); }
+  33.33% { background-image: url('hero-image2.jpg'); }
+  66.66% { background-image: url('hero-image3.jpg'); }
+  100% { background-image: url('hero-image1.jpg'); } /* Loop back to first image */
 }
 
 .hero-section h1 {
@@ -133,7 +115,9 @@
 .card-image {
   flex-grow: 2;
   width: 100%;
-  height: 100%;
+  height: 300px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .card-content {
@@ -201,13 +185,16 @@
 /* Image Path Options */
 .card:nth-child(1) .card-image {
   background-image: url('./featured-image1.jpg'); /* Assuming images are in the same folder */
+  background-size: cover;
 }
 
 .card:nth-child(2) .card-image {
   background-image: url('./featured-image2.jpg');
+  background-size: cover;
 }
 
 .card:nth-child(3) .card-image {
   background-image: url('./jaco-costarica.jpg');
+  background-size: cover;
 }
 
