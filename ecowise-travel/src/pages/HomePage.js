@@ -82,22 +82,6 @@ const Homepage = () => {
 
       {/* Footer */}
       <footer className="footer">
-        <div className="footer-links">
-          <ul>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact-form">Contact Us</Link></li>
-            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-          </ul>
-        </div>
-        <div className="social-media">
-          {/* Use official social media icons */}
-          <a href="https://www.facebook.com" title="Facebook"><i className="fab fa-facebook"></i></a>
-          <a href="https://www.twitter.com" title="Twitter"><i className="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com" title="Instagram"><i className="fab fa-instagram"></i></a>
-        </div>
-        <div className="copyright">
-          <p>&copy; 2024 EcoWise Travel. All rights reserved.</p>
-        </div>
       </footer>
     </div>
   );
