@@ -29,7 +29,6 @@
 
 /* Hero Section Styles */
 .hero-section {
-  background-image: url('hero-image.jpg'); /* Replace with actual image path */
   background-size: cover;
   background-position: center;
   height: 400px; /* Adjust height as needed */
@@ -39,7 +38,16 @@
   align-items: center;
   text-align: center;
   color: #ffffff; /* White text color */
+  animation: slideshow 9s infinite; /* Adjust timing as needed */
 }
+
+@keyframes slideshow {
+  0% { background-image: url('hero-image1.jpg'); }
+  33.33% { background-image: url('hero-image2.jpg'); }
+  66.66% { background-image: url('hero-image3.jpg'); }
+  100% { background-image: url('hero-image1.jpg'); } /* Loop back to first image */
+}
+
 
 .hero-section h1 {
   font-size: 36px;
