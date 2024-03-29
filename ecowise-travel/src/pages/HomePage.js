@@ -12,14 +12,11 @@ const Homepage = () => {
       {/* Hero Section */}
       <section className="hero-section">
 
-        <div className="hero-content">
-          <h1>Explore the World Responsibly</h1>
-          <p>Discover eco-friendly adventures and make a positive impact on the environment.</p>
-        </div>
       </section>
 
       {/* Search Section */}
       <section className="search-section">
+        <h1>Explore the World Responsibly</h1>
         <h2>Find Your Next Eco-Friendly Adventure</h2>
         <div className="search-bar">
           <input type="text" placeholder="Search adventures..." aria-label="Search Adventures" />
