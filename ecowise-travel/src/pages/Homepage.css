@@ -217,7 +217,7 @@
   background-size: cover;
 }
 
-.about-content:nth-child(1) .about-image {
+.about:nth-child(1) .about-image {
   background-image: url('./pie.jpg');
   background-size: cover;
 }
