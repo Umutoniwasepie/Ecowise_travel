@@ -49,7 +49,7 @@ const AdventuresPage = () => {
         {adventuresData.map((adventure) => (
           <div key={adventure.id} className="adventure-card">
             {adventure.image && (
-              <className="adventure-image" />
+              <img src={adventure.image} alt={adventure.title} className="adventure-image" />
             )}
             <div className="adventure-details">
               <h3>{adventure.title}</h3>
