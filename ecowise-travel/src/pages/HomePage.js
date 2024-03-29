@@ -41,7 +41,6 @@ const Homepage = () => {
           </div>
           <div className="card">
             <div className="card-image">
-              <img src=" " alt=" " />
             </div>
             <div className="card-content">
               <h3>Featured Destination 2</h3>
@@ -52,7 +51,6 @@ const Homepage = () => {
           {/* Add more cards as needed */}
           <div className="card">
             <div className="card-image">
-              <img src=" " alt=" " />
             </div>
             <div className="card-content">
               <h3>Featured Destination 3</h3>
