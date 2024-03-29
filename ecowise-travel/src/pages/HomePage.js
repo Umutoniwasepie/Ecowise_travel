@@ -1,6 +1,13 @@
 import React from 'react';
+import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import './Homepage.css'; // Import CSS file for styling
+
+// Custom previous arrow component
+const CustomPrevArrow = (props) => <button {...props} className="prev-slide">&#10094;</button>;
+
+// Custom next arrow component
+const CustomNextArrow = (props) => <button {...props} className="next-slide">&#10095;</button>;
 
 const Homepage = () => {
   const heroSettings = {
@@ -12,6 +19,8 @@ const Homepage = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
+    prevArrow: <CustomPrevArrow />, // Custom previous arrow component
+    nextArrow: <CustomNextArrow />, // Custom next arrow component
     responsive: [
       {
         breakpoint: 768, // Adjust breakpoints as needed
@@ -29,16 +38,17 @@ const Homepage = () => {
 
       {/* Hero Section */}
       <section className="hero-section">
-   <div>
-            <img src=" " alt=" " />
+        <Slider {...heroSettings}>
+          <div>
+            <img src="hero-image1.jpg" alt=" " />
           </div>
           <div>
-            <img src=" " alt=" " />
+            <img src="hero-image2.jpg" alt=" " />
           </div>
           <div>
-            <img src=" " alt=" " />
+            <img src="hero-image3.jpg" alt=" " />
           </div>
-  
+        </Slider>
         <div className="hero-content">
           <h1>Explore the World Responsibly</h1>
           <p>Discover eco-friendly adventures and make a positive impact on the environment.</p>
