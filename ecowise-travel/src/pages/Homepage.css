@@ -135,6 +135,25 @@
   margin-bottom: 10px; /* Add spacing between title and description */
 }
 
+.about-me {
+  padding: 40px 20px; /* Adjust padding as needed */
+  display: flex; /* Arrange image and text side-by-side */
+  align-items: center; /* Vertically align content */
+}
+
+.about-image {
+  width: 200px; /* Adjust image width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Circular image */
+  margin-right: 30px; /* Add margin for spacing */
+}
+
+.about-content p {
+  font-size: 18px; /* Adjust font size as needed */
+  line-height: 1.5; /* Adjust line spacing for readability */
+  margin-bottom: 10px; /* Add spacing between paragraphs */
+}
+
 /* Footer Styles */
 .footer {
   background-color: #336633;
