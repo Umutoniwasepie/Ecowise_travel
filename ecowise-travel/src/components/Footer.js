@@ -1,6 +1,7 @@
 // Footer.js
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import for navigation links
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import here
 
 const Footer = () => {
   const year = new Date().getFullYear(); // Get current year dynamically
@@ -17,10 +18,11 @@ const Footer = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/signin">Sign up</Link>
+              <Link to="/signup">Sign up</Link>
             </li>
+    <br><br>
             <li>
-              <Link to="/Signup">Sign in</Link>
+              <Link to="/signin">Sign in</Link>
             </li>
             {/* Add more links as needed */}
           </ul>
