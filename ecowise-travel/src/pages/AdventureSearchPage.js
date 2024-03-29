@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './Adventure.css'; // Import CSS file for AdventureSearchPage
 
@@ -43,22 +42,9 @@ const adventuresData = [
 
 
 const AdventuresPage = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const location = useLocation();
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const query = params.get('q');
-    setSearchQuery(query);
-    // Fetch adventures based on the search query
-    // You can implement your logic to filter adventures here
-  }, [location.search]);
-
   return (
     <div className="adventures-container">
       <h1>Explore Eco-Friendly Adventures Around the World</h1>
-      <h2>Search Results for "{searchQuery}"</h2> {/* Display search query */}
-      {/* Rest of the component */}
       <div className="adventure-cards">
         {adventuresData.map((adventure) => (
           <div key={adventure.id} className="adventure-card">
