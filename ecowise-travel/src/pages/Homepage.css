@@ -143,9 +143,12 @@
 
 .about-image {
   width: 300px; /* Adjust image width as needed */
-  height: auto; /* Maintain aspect ratio */
+  height: 300px; /* Maintain aspect ratio */
   border-radius: 50%; /* Circular image */
   margin-right: 30px; /* Add margin for spacing */
+  background-image: url("pie.jpg"); /* Replace with your image path */
+  background-size: cover; /* Resize image to cover container */
+  background-position: center; /* Center image within container */
 }
 
 .about-content p {
@@ -214,10 +217,5 @@
 
 .card:nth-child(3) .card-image {
   background-image: url('./jaco-costarica.jpg');
-  background-size: cover;
-}
-
-.about:nth-child(1) .about-image {
-  background-image: url('./pie.jpg');
   background-size: cover;
 }
