@@ -42,11 +42,29 @@
   animation: slideshow 15s infinite; /* Adjust timing as needed */
 }
 
-@keyframes slideshow {
-  0% { background-image: url('hero-image1.jpg'); }
-  33.33% { background-image: url('hero-image2.jpg'); }
-  66.66% { background-image: url('hero-image3.jpg'); }
-  100% { background-image: url('hero-image1.jpg'); } /* Loop back to first image */
+/* Slider Styles */
+.slick-prev, .slick-next {
+  position: absolute;
+  bottom: 20px; /* Adjust vertical position */
+  width: 40px; /* Adjust arrow width */
+  height: 40px; /* Adjust arrow height */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border: none;
+  border-radius: 50%; /* Rounded corners */
+  color: #fff; /* Arrow color */
+  font-size: 24px; /* Arrow size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: 20px; /* Position the previous arrow on the left */
+}
+
+.slick-next {
+  right: 20px; /* Position the next arrow on the right */
 }
 
 .hero-section h1 {
@@ -115,6 +133,7 @@
 .card-image {
   flex-grow: 2;
   width: 100%;
+  height: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
