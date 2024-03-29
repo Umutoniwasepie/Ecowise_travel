@@ -13,6 +13,7 @@ import ContactForm from './pages/ContactForm';
 import ReviewPage from './pages/ReviewPage';
 import './App.css';
 import './styles.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function App() {
   return (
