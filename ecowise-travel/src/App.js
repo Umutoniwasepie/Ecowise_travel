@@ -9,6 +9,7 @@ import Signin from './pages/Signin';
 import AdventureSearchPage from './pages/AdventureSearchPage';
 import ImpactCalculator from './pages/ImpactCalculator';
 import CommunityForum from './pages/CommunityForum';
+import ContactForm from './pages/ContactForm';
 import ReviewPage from './pages/ReviewPage';
 import './App.css';
 import './styles.css';
@@ -27,6 +28,7 @@ function App() {
           <Route path="/impact-calculator" element={<ImpactCalculator />} />
           <Route path="/Signin" element={<Signin />} />
           <Route path="/Signup" element={<Signup />} />
+          <Route path="/contact-form" element={<ContactForm />} />
           <Route path="*" element={null} />
         </Routes>
         <Footer />
