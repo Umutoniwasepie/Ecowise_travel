@@ -56,7 +56,7 @@ const AdventuresPage = () => {
               <p>{adventure.description}</p>
               <p>Rating: {adventure.rating}</p>
               {/* Add a button with a Link to the review page */}
-              <Link to={`/review/${adventure.id}`} className="review-button">Write a Review</Link>
+              <Link to={`/reviews/${adventure.id}`} className="review-button">Write a Review</Link>
             </div>
           </div>
         ))}
