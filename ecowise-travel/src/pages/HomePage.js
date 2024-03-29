@@ -80,13 +80,6 @@ const Homepage = () => {
       </div>
      </section>
 
-     {/* Contact Us Section */}
-      <section className="contact-us">
-        <h2>Contact Us</h2>
-        <p>Have any questions or feedback? Feel free to reach out!</p>
-        <ContactForm />
-      </section>
-
       {/* Footer */}
       <footer className="footer">
         <div className="footer-links">
