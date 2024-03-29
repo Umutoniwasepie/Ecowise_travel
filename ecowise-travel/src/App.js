@@ -8,7 +8,6 @@ import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 import AdventureSearchPage from './pages/AdventureSearchPage';
 import ImpactCalculator from './pages/ImpactCalculator';
-import TravelTips from './pages/TravelTips';
 import CommunityForum from './pages/CommunityForum';
 import ReviewPage from './pages/ReviewPage';
 import './App.css';
@@ -22,7 +21,6 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           {/* Add routes for new paths */}
-          <Route path="/travel-tips" element={<TravelTips />} />
           <Route path="/adventures" element={<AdventureSearchPage />} />
           <Route path="/community-forum" element={<CommunityForum />} />
           <Route path="/reviews" element={<ReviewPage />} />
