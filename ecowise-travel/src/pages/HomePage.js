@@ -29,6 +29,16 @@ const Homepage = () => {
 
       {/* Hero Section */}
       <section className="hero-section">
+   <div>
+            <img src=" " alt=" " />
+          </div>
+          <div>
+            <img src=" " alt=" " />
+          </div>
+          <div>
+            <img src=" " alt=" " />
+          </div>
+  
         <div className="hero-content">
           <h1>Explore the World Responsibly</h1>
           <p>Discover eco-friendly adventures and make a positive impact on the environment.</p>
