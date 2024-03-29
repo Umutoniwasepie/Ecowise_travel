@@ -26,20 +26,15 @@ const Homepage = () => {
 
       </section>
 
-       {/* Search Section */}
+      {/* Search Section */}
       <section className="search-section">
         <h1>Explore the World Responsibly</h1>
         <h2>Find Your Next Eco-Friendly Adventure</h2>
-        <form onSubmit={handleSubmit} className="search-bar"> {/* Use form element for submission */}
-          <input
-            type="text"
-            placeholder="Search adventures..."
-            aria-label="Search Adventures"
-            value={searchQuery}
-            onChange={handleInputChange}
-          />
-          <button type="submit">Search</button>
-        </form>
+        <div className="search-bar">
+          <input type="text" placeholder="Search adventures..." aria-label="Search Adventures" />
+          {/* Link the button to the AdventureSearchPage */}
+          <button onClick={() => history.push('/adventures')}>Search</button>
+        </div>
         <p>Filter by location, activity type, sustainability ratings, and more.</p>
       </section>
 
