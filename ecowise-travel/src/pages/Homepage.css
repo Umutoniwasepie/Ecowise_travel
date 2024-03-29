@@ -31,14 +31,14 @@
 .hero-section {
   background-size: cover;
   background-position: center;
-  height: 400px; /* Adjust height as needed */
+  height: 500px; /* Adjust height as needed */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #ffffff; /* White text color */
-  animation: slideshow 9s infinite; /* Adjust timing as needed */
+  animation: slideshow 15s infinite; /* Adjust timing as needed */
 }
 
 @keyframes slideshow {
