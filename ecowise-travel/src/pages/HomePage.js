@@ -62,16 +62,19 @@ const Homepage = () => {
       </section>
 
       {/* About Me Section */}
-      <section className="about-me">
-        <h2>About Me</h2>
-        <p>
+     <section className="about-me">
+      <h2>About Me</h2>
+       <div className="about-content">
+        <img src="pie.jpg" alt="U.P- About Me" class="about-image" />
+         <p>
           Hi there! My name is Pierrette U, and I'm passionate about travel and
           environmental responsibility. I believe that exploring the world
           doesn't have to come at the expense of our planet. That's why I
           created EcoWise Travel – a platform to help you discover amazing
           destinations while making sustainable choices. 
         </p>
-      </section>
+       </div>
+     </section>
 
       {/* Footer */}
       <footer className="footer">
