@@ -137,8 +137,14 @@
 
 .about-me {
   padding: 40px 20px; /* Adjust padding as needed */
-  display: flex; /* Arrange image and text side-by-side */
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
   align-items: center; /* Vertically align content */
+}
+
+.about-me h2 {
+  font-size: 30px; /* Increase font size for h2 */
+  margin: 0; /* Remove default margin for better positioning */
 }
 
 .about-image {
