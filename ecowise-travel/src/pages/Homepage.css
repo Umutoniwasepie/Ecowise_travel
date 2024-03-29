@@ -48,6 +48,13 @@
   100% { background-image: url('hero-image1.jpg'); } /* Loop back to first image */
 }
 
+/* Remove default list styles from hero section */
+.hero-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .hero-section h1 {
   font-size: 36px;
   margin-bottom: 20px;
