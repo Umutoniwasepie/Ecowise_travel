@@ -3,12 +3,6 @@ import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import './Homepage.css'; // Import CSS file for styling
 
-// Custom previous arrow component
-const CustomPrevArrow = (props) => <button {...props} className="prev-slide">&#10094;</button>;
-
-// Custom next arrow component
-const CustomNextArrow = (props) => <button {...props} className="next-slide">&#10095;</button>;
-
 const Homepage = () => {
   const heroSettings = {
     dots: false,
