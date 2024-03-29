@@ -1,37 +1,21 @@
 /* Homepage.css */
-/* Header Styles */
-.header {
-  background-color: #ffffff; /* White background */
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #336633; /* Eco-friendly green color */
-}
-
-.navigation {
-  display: flex; /* Maintain flex display for navigation links */
-}
-
-.navigation li {
-  margin-right: 20px;
-}
-
-.navigation li a {
-  text-decoration: none;
-  color: #336633; /* Eco-friendly green color */
-}
-
 /* Hero Section Styles */
 .hero-section {
   height: 600px; /* Adjust height as needed */
   color: #ffffff; /* White text color */
   position: relative; /* Position the arrows relative to the hero section */
+}
+
+.hero-section.slide1 {
+  background-image: url('hero-image1.jpg'); /* Specify the URL for the first background image */
+}
+
+.hero-section.slide2 {
+  background-image: url('hero-image2.jpg'); /* Specify the URL for the second background image */
+}
+
+.hero-section.slide3 {
+  background-image: url('hero-image3.jpg'); /* Specify the URL for the third background image */
 }
 
 .hero-section h1 {
