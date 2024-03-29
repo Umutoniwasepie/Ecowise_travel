@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ContactForm.css'; // Import the CSS file for styling
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -18,7 +19,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="contact-form">
       <label htmlFor="name">Your Name:</label>
       <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
       <label htmlFor="email">Your Email:</label>
@@ -31,4 +32,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
