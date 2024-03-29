@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css'; // Import CSS file for styling
+import ContactForm from './ContactForm'; // Import the ContactForm component
 
 const Homepage = () => {
 
@@ -79,12 +80,19 @@ const Homepage = () => {
       </div>
      </section>
 
+     {/* Contact Us Section */}
+      <section className="contact-us">
+        <h2>Contact Us</h2>
+        <p>Have any questions or feedback? Feel free to reach out!</p>
+        <ContactForm />
+      </section>
+
       {/* Footer */}
       <footer className="footer">
         <div className="footer-links">
           <ul>
             <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/ContactForm">Contact Us</Link></li>
             <li><Link to="/privacy-policy">Privacy Policy</Link></li>
           </ul>
         </div>
