@@ -62,8 +62,8 @@ const Homepage = () => {
       </section>
 
       {/* About Me Section */}
-     <section className="about-me" id="about-us">
-     <Link to="/about"><h2>About Me</h2></Link>
+     <section className="about-me">
+       <h2>About Me</h2>
        <div className="about">
          <div className="about-image">
          </div>
