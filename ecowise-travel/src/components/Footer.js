@@ -27,12 +27,18 @@ const Footer = () => {
         </nav>
         <div className="social-media"> {/* Optional: Add social media icons */}
           {/* Replace with your social media links (e.g., Facebook, Instagram) */}
-          <a href="https://www.linkedin.com/in/pierrette-umutoniwase/" target="_blank" rel="noreferrer noopener">
-                <i className="fab fa-linkedin"></i> LinkedIn
-          </a>
-         <a href="https://www.instagram.com/your-instagram-handle" target="_blank" rel="noreferrer noopener">
-                <i className="fab fa-instagram"></i> Instagram
-         </a>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noreferrer noopener">
+                <FontAwesomeIcon icon="fab fa-linkedin" /> LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/your-instagram-handle" target="_blank" rel="noreferrer noopener">
+                <FontAwesomeIcon icon="fab fa-instagram" /> Instagram
+              </a>
+            </li>
+          </ul>
           {/* Add more social media icons as needed */}
         </div>
       </div>
