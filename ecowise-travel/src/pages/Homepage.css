@@ -48,7 +48,6 @@
   100% { background-image: url('hero-image1.jpg'); } /* Loop back to first image */
 }
 
-
 .hero-section h1 {
   font-size: 36px;
   margin-bottom: 20px;
@@ -149,20 +148,6 @@
 .footer li:last-child {
   margin-right: 0;
 }
-
-/* Image Path Options */
-.featured-cards:nth-child(1) .card {
-  background-image: url('./featured-image1.jpg'); /* Assuming images are in the same folder */
-}
-
-.featured-cards:nth-child(2) .card {
-  background-image: url('./featured-image2.jpg');
-}
-
-.featured-cards:nth-child(3) .card {
-  background-image: url('./jaco-costarica.jpg');
-}
-
 
 /* Fallback for Missing Images */
 .card {
