@@ -20,7 +20,7 @@ const Homepage = () => {
         <h2>Find Your Next Eco-Friendly Adventure</h2>
         <div className="search-bar">
           <input type="text" placeholder="Search adventures..." aria-label="Search Adventures" />
-          <button>Search</button>
+        <Link to="/adventures/"> <button>Search</button> </Link>
         </div>
         <p>Filter by location, activity type, sustainability ratings, and more.</p>
       </section>
