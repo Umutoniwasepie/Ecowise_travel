@@ -36,8 +36,9 @@
 }
 
 .adventure-image {
-  width: 300px;
+  width: 500px;
   height: auto;
+  
 }
 
 .adventure-details {
@@ -69,10 +70,12 @@
 /* Image Path Options */
 .adventure-card:nth-child(1) .adventure-image {
   background-image: url('./mariott-rwanda.jpg'); /* Assuming images are in the same folder */
+  background-size: cover;
 }
 
 .adventure-card:nth-child(2) .adventure-image {
   background-image: url('./goreme-turkey.jpg');
+  background-size: cover;
 }
 
 .adventure-card:nth-child(3) .adventure-image {
