@@ -65,29 +65,41 @@ const Homepage = () => {
         <p>Filter by location, activity type, sustainability ratings, and more.</p>
       </section>
 
-      {/* Featured Content */}
+     {/* Featured Content */}
       <section className="featured-content">
         <h2>Featured Destinations</h2>
         <div className="featured-cards">
           {/* Add cards or tiles showcasing featured destinations, tips, or testimonials */}
           <div className="card">
-            <img src="featured-image1.jpg" alt=" " />
-            <h3>Featured Destination 1</h3>
-            <p>Description of the destination...</p>
-            <p>A paragraph about the destination goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt. Quisque vulputate, libero eget consectetur interdum, metus quam scelerisque justo, a luctus velit sapien ut nunc.</p>
+            <div className="card-image">
+              <img src="featured-image1.jpg" alt=" " />
+            </div>
+            <div className="card-content">
+              <h3>Featured Destination 1</h3>
+              <p>Description of the destination...</p>
+              <p>A paragraph about the destination goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt. Quisque vulputate, libero eget consectetur interdum, metus quam scelerisque justo, a luctus velit sapien ut nunc.</p>
+            </div>
           </div>
           <div className="card">
-            <img src="featured-image2.jpg" alt=" " />
-            <h3>Featured Destination 2</h3>
-            <p>Rwanda – Your next luxury eco-tourism destination.</p>
-            <p>Explore the breathtaking landscapes of Rwanda while supporting sustainable tourism initiatives. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt.</p>
+            <div className="card-image">
+              <img src="featured-image2.jpg" alt=" " />
+            </div>
+            <div className="card-content">
+              <h3>Featured Destination 2</h3>
+              <p>Rwanda – Your next luxury eco-tourism destination.</p>
+              <p>Explore the breathtaking landscapes of Rwanda while supporting sustainable tourism initiatives. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt.</p>
+            </div>
           </div>
           {/* Add more cards as needed */}
           <div className="card">
-            <img src="jaco-costarica.jpg" alt="Featured Destination 3" />
-            <h3>Featured Destination 3</h3>
-            <p>Description of the destination...</p>
-            <p>A paragraph about the destination goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt. Quisque vulputate, libero eget consectetur interdum, metus quam scelerisque justo, a luctus velit sapien ut nunc.</p>
+            <div className="card-image">
+              <img src="jaco-costarica.jpg" alt="Featured Destination 3" />
+            </div>
+            <div className="card-content">
+              <h3>Featured Destination 3</h3>
+              <p>Description of the destination...</p>
+              <p>A paragraph about the destination goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt. Quisque vulputate, libero eget consectetur interdum, metus quam scelerisque justo, a luctus velit sapien ut nunc.</p>
+            </div>
           </div>
         </div>
       </section>
