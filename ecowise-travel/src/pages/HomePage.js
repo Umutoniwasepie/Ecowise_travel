@@ -1,35 +1,8 @@
 import React from 'react';
-import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import './Homepage.css'; // Import CSS file for styling
 
-// Custom previous arrow component
-const CustomPrevArrow = (props) => <button {...props} className="prev-slide">&#10094;</button>;
-
-// Custom next arrow component
-const CustomNextArrow = (props) => <button {...props} className="next-slide">&#10095;</button>;
-
 const Homepage = () => {
-  const heroSettings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Show three slides at a time
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    prevArrow: <CustomPrevArrow />, // Custom previous arrow component
-    nextArrow: <CustomNextArrow />, // Custom next arrow component
-    responsive: [
-      {
-        breakpoint: 768, // Adjust breakpoints as needed
-        settings: {
-          slidesToShow: 1, // Show one slide at a time on smaller screens
-        }
-      }
-    ]
-  };
 
   return (
     <div className="homepage-container">
@@ -38,15 +11,14 @@ const Homepage = () => {
 
       {/* Hero Section */}
       <section className="hero-section">
-        <Slider {...heroSettings}>
           <div>
-            <img src="hero-image1.jpg" alt=" " />
+            <img src=" " alt=" " />
           </div>
           <div>
-            <img src="hero-image2.jpg" alt=" " />
+            <img src=" " alt=" " />
           </div>
           <div>
-            <img src="hero-image3.jpg" alt=" " />
+            <img src=" " alt=" " />
           </div>
         </Slider>
         <div className="hero-content">
@@ -72,7 +44,7 @@ const Homepage = () => {
           {/* Add cards or tiles showcasing featured destinations, tips, or testimonials */}
           <div className="card">
             <div className="card-image">
-              <img src="featured-image1.jpg" alt=" " />
+              <img src=" " alt=" " />
             </div>
             <div className="card-content">
               <h3>Featured Destination 1</h3>
@@ -82,7 +54,7 @@ const Homepage = () => {
           </div>
           <div className="card">
             <div className="card-image">
-              <img src="featured-image2.jpg" alt=" " />
+              <img src=" " alt=" " />
             </div>
             <div className="card-content">
               <h3>Featured Destination 2</h3>
@@ -93,7 +65,7 @@ const Homepage = () => {
           {/* Add more cards as needed */}
           <div className="card">
             <div className="card-image">
-              <img src="jaco-costarica.jpg" alt="Featured Destination 3" />
+              <img src=" " alt=" " />
             </div>
             <div className="card-content">
               <h3>Featured Destination 3</h3>
