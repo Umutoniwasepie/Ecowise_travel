@@ -1,8 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import './Homepage.css'; // Import CSS file for styling
 
 const Homepage = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const history = useHistory(); // Initialize history object
+
+  const handleInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Navigate to AdventuresPage with the search query as a URL parameter
+    history.push(`/adventures?q=${searchQuery}`);
+  };
 
   return (
     <div className="homepage-container">
@@ -14,14 +26,20 @@ const Homepage = () => {
 
       </section>
 
-      {/* Search Section */}
+       {/* Search Section */}
       <section className="search-section">
         <h1>Explore the World Responsibly</h1>
         <h2>Find Your Next Eco-Friendly Adventure</h2>
-        <div className="search-bar">
-          <input type="text" placeholder="Search adventures..." aria-label="Search Adventures" />
-          <button>Search</button>
-        </div>
+        <form onSubmit={handleSubmit} className="search-bar"> {/* Use form element for submission */}
+          <input
+            type="text"
+            placeholder="Search adventures..."
+            aria-label="Search Adventures"
+            value={searchQuery}
+            onChange={handleInputChange}
+          />
+          <button type="submit">Search</button>
+        </form>
         <p>Filter by location, activity type, sustainability ratings, and more.</p>
       </section>
 
