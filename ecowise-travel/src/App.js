@@ -31,9 +31,6 @@ function App() {
           <Route path="/contact-form" element={<ContactForm />} />
           <Route path="*" element={null} />
         </Routes>
-        <Routes>
-            <Route path="/contact-form" element={<ContactForm />} />
-        </Routes>
         <Footer />
       </div>
     </Router>
