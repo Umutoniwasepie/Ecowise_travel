@@ -44,16 +44,18 @@
 }
 
 /* Slider Styles */
-.slick-prev, .slick-next {
+/* Update Slider Styles */
+.slick-prev,
+.slick-next {
   position: absolute;
-  bottom: 20px; /* Adjust vertical position */
-  width: 40px; /* Adjust arrow width */
-  height: 40px; /* Adjust arrow height */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
-  border-radius: 50%; /* Rounded corners */
-  color: #fff; /* Arrow color */
-  font-size: 24px; /* Arrow size */
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,11 +63,11 @@
 }
 
 .slick-prev {
-  left: 20px; /* Position the previous arrow on the left */
+  left: calc(50% - 80px); /* Position previous arrow to the left of center */
 }
 
 .slick-next {
-  right: 20px; /* Position the next arrow on the right */
+  right: calc(50% - 80px); /* Position next arrow to the right of center */
 }
 
 /* Remove default list styles from hero section */
