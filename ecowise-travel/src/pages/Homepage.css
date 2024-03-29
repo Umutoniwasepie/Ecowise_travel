@@ -29,9 +29,30 @@
 
 /* Hero Section Styles */
 .hero-section {
+  background-size: cover;
+  background-position: center;
   height: 600px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   color: #ffffff; /* White text color */
-  position: relative; /* Position the arrows relative to the hero section */
+  animation: slideshow 30s infinite; /* Adjust timing as needed */
+}
+
+@keyframes slideshow {
+  0% { background-image: url('hero-image1.jpg'); }
+  33.33% { background-image: url('hero-image2.jpg'); }
+  66.66% { background-image: url('hero-image3.jpg'); }
+  100% { background-image: url('hero-image1.jpg'); } /* Loop back to first image */
+}
+
+/* Remove default list styles from hero section */
+.hero-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .hero-section h1 {
@@ -41,40 +62,6 @@
 
 .hero-section p {
   font-size: 18px;
-}
-
-/* Slider Styles */
-/* Update Slider Styles */
-.slick-prev,
-.slick-next {
-  position: absolute;
-  bottom: 20px;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.slick-prev {
-  left: calc(50% - 80px); /* Position previous arrow to the left of center */
-}
-
-.slick-next {
-  right: calc(50% - 80px); /* Position next arrow to the right of center */
-}
-
-/* Remove default list styles from hero section */
-.hero-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 /* Search Section Styles */
