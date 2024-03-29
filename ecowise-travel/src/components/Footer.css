@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem 2rem;
+  background-color: #f5f5f5;
+}
+
+.footer-content {
+  display: flex;
+  width: 100%; /* Ensure content fills the available width */
+  justify-content: space-between; /* Distribute navigation links and social media icons horizontally */
+}
+
+.navigation-links {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Reset default padding */
+  margin: 0; /* Reset default margin */
+}
+
+.navigation-links li {
+  display: inline-block; /* Display navigation links horizontally */
+  margin-right: 1rem; /* Add some margin between links */
+}
+
+.navigation-links a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Set link text color */
+}
+
+.copyright {
+  text-align: center; /* Center align copyright text */
+  margin-bottom: 0.5rem; /* Add some space below copyright */
+  color: #333; /* Set copyright text color */
+}
+
+.social-media {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Reset default padding */
+  margin: 0; /* Reset default margin */
+}
+
+.social-media li {
+  display: inline-block; /* Display social media icons horizontally */
+  margin-left: 1rem; /* Add some margin between icons */
+}
+
+.social-media a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Set icon color */
+}
