@@ -142,7 +142,7 @@
   align-items: center; /* Vertically align content */
 }
 
-.about-me h2 {
+.about-me .about -h2 {
   font-size: 30px; /* Increase font size for h2 */
   margin: 0; /* Remove default margin for better positioning */
 }
