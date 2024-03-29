@@ -3,55 +3,45 @@ import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import './Homepage.css'; // Import CSS file for styling
 
-// Custom previous arrow component
-const CustomPrevArrow = (props) => <button {...props} className="prev-slide">&#10094;</button>;
-
-// Custom next arrow component
-const CustomNextArrow = (props) => <button {...props} className="next-slide">&#10095;</button>;
-
 const Homepage = () => {
-  const heroSettings = {
+  const sliderSettings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Show three slides at a time
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
-    prevArrow: <CustomPrevArrow />, // Custom previous arrow component
-    nextArrow: <CustomNextArrow />, // Custom next arrow component
-    responsive: [
-      {
-        breakpoint: 768, // Adjust breakpoints as needed
-        settings: {
-          slidesToShow: 1, // Show one slide at a time on smaller screens
-        }
-      }
-    ]
   };
 
   return (
     <div className="homepage-container">
       {/* Header */}
-      <header className="header"></header>
+      <header className="header">
+        
+      </header>
 
       {/* Hero Section */}
       <section className="hero-section">
-        <Slider {...heroSettings}>
-          <div>
+        <Slider {...sliderSettings}>
+          <div className="slide">
             <img src="hero-image1.jpg" alt=" " />
           </div>
-          <div>
+          <div className="slide">
             <img src="hero-image2.jpg" alt=" " />
           </div>
-          <div>
+          <div className="slide">
             <img src="hero-image3.jpg" alt=" " />
           </div>
         </Slider>
         <div className="hero-content">
           <h1>Explore the World Responsibly</h1>
           <p>Discover eco-friendly adventures and make a positive impact on the environment.</p>
+        </div>
+        <div className="slider-controls">
+          <button className="prev-slide" onClick={() => this.slider.slickPrev()}>&#10094;</button>
+          <button className="next-slide" onClick={() => this.slider.slickNext()}>&#10095;</button>
         </div>
       </section>
 
