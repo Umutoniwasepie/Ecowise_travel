@@ -20,7 +20,6 @@ const Homepage = () => {
           <div>
             <img src=" " alt=" " />
           </div>
-        </Slider>
         <div className="hero-content">
           <h1>Explore the World Responsibly</h1>
           <p>Discover eco-friendly adventures and make a positive impact on the environment.</p>
