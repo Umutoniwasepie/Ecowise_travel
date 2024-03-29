@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Assuming Font Awesome is imported centrally
-import './footer.css'; // Import the CSS file
+import './Footer.css'; // Import the CSS file
 
 const Footer = () => {
   const year = new Date().getFullYear(); // Get current year dynamically
