@@ -18,12 +18,12 @@ const Footer = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/signup">Sign up</Link>
+              <Link to="/Signup">Sign up</Link>
             </li>
     <br></br>
     <br></br>
             <li>
-              <Link to="/signin">Sign in</Link>
+              <Link to="/Signin">Sign in</Link>
             </li>
             {/* Add more links as needed */}
           </ul>
