@@ -1,20 +1,8 @@
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Homepage.css'; // Import CSS file for styling
 
 const Homepage = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const history = useHistory(); // Initialize history object
-
-  const handleInputChange = (event) => {
-    setSearchQuery(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Navigate to AdventuresPage with the search query as a URL parameter
-    history.push(`/adventures?q=${searchQuery}`);
-  };
 
   return (
     <div className="homepage-container">
@@ -32,8 +20,7 @@ const Homepage = () => {
         <h2>Find Your Next Eco-Friendly Adventure</h2>
         <div className="search-bar">
           <input type="text" placeholder="Search adventures..." aria-label="Search Adventures" />
-          {/* Link the button to the AdventureSearchPage */}
-          <button onClick={() => history.push('/adventures')}>Search</button>
+          <button>Search</button>
         </div>
         <p>Filter by location, activity type, sustainability ratings, and more.</p>
       </section>
