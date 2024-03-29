@@ -30,7 +30,6 @@ const Homepage = () => {
 
       {/* Hero Section */}
       <section className="hero-section">
-        <Slider {...heroSettings}>
           <div>
             <img src="hero-image1.jpg" alt=" " />
           </div>
