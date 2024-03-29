@@ -142,7 +142,7 @@
 }
 
 .about-image {
-  width: 200px; /* Adjust image width as needed */
+  width: 300px; /* Adjust image width as needed */
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Circular image */
   margin-right: 30px; /* Add margin for spacing */
@@ -217,3 +217,7 @@
   background-size: cover;
 }
 
+.about-content:nth-child(1) .about-image {
+  background-image: url('./pie.jpg');
+  background-size: cover;
+}
