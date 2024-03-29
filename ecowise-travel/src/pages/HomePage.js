@@ -63,7 +63,7 @@ const Homepage = () => {
 
       {/* About Me Section */}
      <section className="about-me" id="about-us">
-      <h2>About Me</h2>
+     <Link to="/about"><h2>About Me</h2></Link>
        <div className="about">
          <div className="about-image">
          </div>
@@ -83,7 +83,7 @@ const Homepage = () => {
       <footer className="footer">
         <div className="footer-links">
           <ul>
-            <li><Link to="/about" id="about-us">About Us</Link></li>
+            <li><Link to="/about">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
             <li><Link to="/privacy-policy">Privacy Policy</Link></li>
           </ul>
