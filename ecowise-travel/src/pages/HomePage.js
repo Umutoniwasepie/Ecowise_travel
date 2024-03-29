@@ -3,6 +3,12 @@ import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import './Homepage.css'; // Import CSS file for styling
 
+// Custom previous arrow component
+const CustomPrevArrow = (props) => <button {...props} className="prev-slide">&#10094;</button>;
+
+// Custom next arrow component
+const CustomNextArrow = (props) => <button {...props} className="next-slide">&#10095;</button>;
+
 const Homepage = () => {
   const heroSettings = {
     dots: false,
@@ -20,16 +26,10 @@ const Homepage = () => {
         breakpoint: 768, // Adjust breakpoints as needed
         settings: {
           slidesToShow: 1, // Show one slide at a time on smaller screens
-        },
-      },
-    ],
+        }
+      }
+    ]
   };
-
-  // Custom previous arrow component
-  const CustomPrevArrow = (props) => <button {...props} className="prev-slide">&#10094;</button>;
-
-  // Custom next arrow component
-  const CustomNextArrow = (props) => <button {...props} className="next-slide">&#10095;</button>;
 
   return (
     <div className="homepage-container">
