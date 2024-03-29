@@ -3,6 +3,8 @@
   flex-direction: column; /* Align elements one per row */
   width: 100%; /* Make form fit container width */
   margin: 0 auto; /* Center form horizontally */
+  justify-content: center; /* Center elements horizontally within container */
+  align-items: center; /* Center elements vertically within container */
 }
 
 .contact-form label {
@@ -12,16 +14,15 @@
 
 .contact-form input,
 .contact-form textarea {
-  width: 500px; /* Make input fields full width */
+  width: 650px; /* Make input fields full width */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 15px; /* Add spacing between elements */
-  text-align: center;
 }
 
 .contact-form button {
-  width: 300px;
+  width: 250px;
   background-color: #555;
   color: #9dcd43;
   padding: 10px 20px;
