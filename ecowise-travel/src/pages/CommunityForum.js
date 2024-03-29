@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Fix the import statement
 
 const CommunityForum = () => {
   const [title, setTitle] = useState('');
