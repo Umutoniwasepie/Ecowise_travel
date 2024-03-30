@@ -46,7 +46,7 @@ const AdventuresPage = () => {
     <div className="adventures-container">
      {/* Section with an image on top */}
       <section className="page-header">
-        <img src="path/to/header-image.jpg" alt="Header" />
+        <img src="gorilla-rwanda.jpg" alt="Header" />
       </section>
       {/* Title */}
       <h1>Explore Eco-Friendly Adventures Around the World</h1>
@@ -66,8 +66,11 @@ const AdventuresPage = () => {
             )}
             <div className="adventure-details">
               <h3>{adventure.title}</h3>
+                            <br></br>
               <p>{adventure.description}</p>
+                            <br></br>
               <p>Rating: {adventure.rating}</p>
+                            <br></br>
               {/* Add a button with a Link to the review page */}
               <Link to={"/reviews/"} className="review-button">Write a Review</Link>
             </div>
