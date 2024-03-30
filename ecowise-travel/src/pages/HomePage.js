@@ -7,7 +7,6 @@ const Homepage = () => {
   return (
     <div className="homepage-container">
       {/* Header */}
-      <header className="header"></header>
 
       {/* Hero Section */}
       <section className="hero-section">
