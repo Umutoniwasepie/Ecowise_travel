@@ -60,4 +60,48 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// Update User Profile Endpoint
+router.put('/profile', async (req, res) => {
+  try {
+    const { username, email } = req.body;
+    const userId = req.user.id; // Retrieve user ID from authenticated user
+    const updatedUser = await User.update({ username, email }, { where: { id: userId } });
+    res.status(200).json(updatedUser);
+  } catch (error) {
+    console.error('Error updating user profile:', error);
+    res.status(500).json({ message: 'Failed to update user profile' });
+  }
+});
+
+// Change Password Endpoint
+router.put('/password', async (req, res) => {
+  try {
+    const { currentPassword, newPassword } = req.body;
+    const userId = req.user.id; // Retrieve user ID from authenticated user
+
+    // Find user by ID
+    const user = await User.findByPk(userId);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Check if current password is correct
+    const isPasswordValid = await bcrypt.compare(currentPassword, user.password);
+    if (!isPasswordValid) {
+      return res.status(401).json({ message: 'Invalid current password' });
+    }
+
+    // Hash the new password
+    const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+    // Update user's password
+    await User.update({ password: hashedPassword }, { where: { id: userId } });
+
+    res.status(200).json({ message: 'Password changed successfully' });
+  } catch (error) {
+    console.error('Error changing password:', error);
+    res.status(500).json({ message: 'Failed to change password' });
+  }
+});
+
 module.exports = router;
