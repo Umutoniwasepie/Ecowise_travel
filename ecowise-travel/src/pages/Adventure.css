@@ -31,6 +31,13 @@
   padding: 30px;
 }
 
+.adventures-container h2 {
+  background-image: url('./gorilla-rwanda.jpg'); /* Assuming images are in the same folder */
+  background-size: cover;
+  width: 100%;
+  max-height: 300px;
+}
+
 .adventure-card {
   width: 95%; /* Adjust the width of the card */
   height: 500px; /* Adjust the height of the card */
