@@ -1,3 +1,5 @@
+// authMiddleware.js
+
 const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 
@@ -27,5 +29,19 @@ const verifyToken = async (req, res, next) => {
   }
 };
 
-module.exports = { verifyToken };
+// Middleware to protect routes that require authentication
+const protectRoutes = (req, res, next) => {
+  // List of routes that require authentication
+  const protectedRoutes = ['/api/users', '/api/reviews']; // Add more routes as needed
 
+  // Check if the requested route requires authentication
+  if (protectedRoutes.includes(req.path)) {
+    // Call the verifyToken middleware for authentication
+    return verifyToken(req, res, next);
+  }
+
+  // If the route is not protected, move to the next middleware or route handler
+  next();
+};
+
+module.exports = { verifyToken, protectRoutes };
