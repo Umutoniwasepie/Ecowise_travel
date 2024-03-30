@@ -44,10 +44,6 @@ const adventuresData = [
 const AdventuresPage = () => {
   return (
     <div className="adventures-container">
-     {/* Section with an image on top */}
-      <section className="page-header">
-        <img src="gorilla-rwanda.jpg" alt="Header" />
-      </section>
       {/* Title */}
         <h1>Explore Eco-Friendly Adventures Around the World</h1>
           <div className="adventure-cards">
