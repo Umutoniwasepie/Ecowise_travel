@@ -1,5 +1,6 @@
 const express = require('express');
 const sequelize = require('./models/index').sequelize;
+const ecoTravelRoutes = require('./routes/ecoTravelRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -26,6 +27,9 @@ app.use('/api/users', require('./routes/userRoutes'));
 
 // Example review route
 app.use('/api/reviews', require('./routes/reviewRoutes'));
+
+// Example routes...
+app.use('/api/ecoTravel', ecoTravelRoutes);
 
 // Start the server
 app.listen(PORT, () => {
