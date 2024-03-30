@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "postgres",
-    "password": piepie,
+    "password": "piepie",
     "database": "eco_wise_travel_db",
     "host": "localhost",
     "dialect": "postgres"
