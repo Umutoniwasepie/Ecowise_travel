@@ -44,6 +44,10 @@ const adventuresData = [
 const AdventuresPage = () => {
   return (
     <div className="adventures-container">
+     {/* Section with an image on top */}
+      <section className="page-header">
+        <img src="path/to/header-image.jpg" alt="Header" />
+      </section>
       <h1>Explore Eco-Friendly Adventures Around the World</h1>
       <div className="adventure-cards">
         {adventuresData.map((adventure) => (
