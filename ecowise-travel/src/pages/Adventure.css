@@ -42,15 +42,6 @@
   transition: transform 0.3s ease; /* Transition for hover effect */
 }
 
-/* Alternate alignment of image */
-.adventure-card.even .adventure-image {
-  order: 2;
-}
-
-.adventure-card.odd .adventure-image {
-  order: 1;
-} 
-
 .adventure-card:hover {
   transform: scale(1.05); /* Increase size on hover */
 }
