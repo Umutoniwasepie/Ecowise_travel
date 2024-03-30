@@ -49,21 +49,14 @@ const AdventuresPage = () => {
         <img src="gorilla-rwanda.jpg" alt="Header" />
       </section>
       {/* Title */}
-      <h1>Explore Eco-Friendly Adventures Around the World</h1>
-
-      {/* Adventure Cards */}
-      <div className="adventure-cards">
-        {adventuresData.map((adventure, index) => (
-          <div key={adventure.id} className={`adventure-card ${index % 2 === 0 ? 'even' : 'odd'}`}>
-            <div className="adventure-details">
-              <h3>{adventure.title}</h3>
-              <p>{adventure.description}</p>
-              <p>Rating: {adventure.rating}</p>
-              <Link to={`/reviews/${adventure.id}`} className="review-button">Write a Review</Link>
-            </div>
-            {adventure.image && (
-              <img src={adventure.image} alt={adventure.title} className="adventure-image" />
+        <h1>Explore Eco-Friendly Adventures Around the World</h1>
+          <div className="adventure-cards">
+           {adventuresData.map((adventure) => (
+             <div key={adventure.id} className="adventure-card">
+               {adventure.image && (
+                 <img src={adventure.image} alt={adventure.title} className="adventure-image" />
             )}
+             
             <div className="adventure-details">
               <h3>{adventure.title}</h3>
                             <br></br>
