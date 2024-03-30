@@ -3,6 +3,10 @@
 const express = require('express');
 const router = express.Router();
 const { Review } = require('../models/review'); // Import the Review model
+const { protectRoutes } = require('../middleware/authMiddleware'); // Import the protectRoutes middleware
+
+// Apply the protectRoutes middleware to all routes in this file
+router.use(protectRoutes);
 
 // Route to create a new review
 router.post('/', async (req, res) => {
