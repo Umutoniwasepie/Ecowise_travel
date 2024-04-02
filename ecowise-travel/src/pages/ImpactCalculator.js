@@ -13,10 +13,8 @@ const ImpactCalculator = () => {
   const [isLoading, setIsLoading] = useState(false); // Track API call state
   const [errorMessage, setErrorMessage] = useState(null); // Store API error message
 
-  // Replace with actual API key
   const apiKey = 'd9677418b2msh740d6cd4752d889p125e87jsn63f0305fadbb';
 
-  // API URLs
   const apiUrlMap = {
     CarTravel: 'https://carbonfootprint1.p.rapidapi.com/CarbonFootprintFromCarTravel',
     Flight: 'https://carbonfootprint1.p.rapidapi.com/CarbonFootprintFromFlight',
@@ -30,8 +28,8 @@ const ImpactCalculator = () => {
   };
 
   const calculateCarbonFootprint = async () => {
-    setIsLoading(true); // Set loading state
-    setErrorMessage(null); // Clear previous errors
+    setIsLoading(true);
+    setErrorMessage(null);
 
     const { distance, transportationMode, accommodationType, travelers } = tripDetails;
 
