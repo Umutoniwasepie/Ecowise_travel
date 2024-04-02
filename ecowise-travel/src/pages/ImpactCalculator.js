@@ -27,56 +27,51 @@ const ImpactCalculator = () => {
     setTripDetails({ ...tripDetails, [name]: value });
   };
 
-  const calculateCarbonFootprint = async () => {
-    setIsLoading(true);
-    setErrorMessage(null);
+   const calculateCarbonFootprint = () => {
+  setIsLoading(true);
+  setErrorMessage(null);
 
-    const { distance, transportationMode, accommodationType, travelers } = tripDetails;
+  const { distance, transportationMode, accommodationType, travelers } = tripDetails;
 
-    try {
-      if (!transportationMode) {
-        throw new Error('Please select a transportation mode.');
-      }
-
-      const response = await axios.get(apiUrlMap[transportationMode], {
-        params: {
-          distance: Number(distance),
-        },
-        headers: {
-          'X-RapidAPI-Key': apiKey,
-          'X-RapidAPI-Host': 'carbonfootprint1.p.rapidapi.com',
-        },
-      });
-
-      if (!response.data || !response.data.carbon_footprint) {
-        throw new Error('Failed to calculate carbon footprint. Please try again later.');
-      }
-
-      const transportationFootprint = response.data.carbon_footprint;
-      
-      let accommodationFootprint = 0;
-      switch (accommodationType) {
-        case 'Hotel':
-          accommodationFootprint = travelers * 0.04; // calculation for hotel 
-          break;
-        case 'Airbnb':
-          accommodationFootprint = travelers * 0.02; // calculation for Airbnb
-          break;
-        case 'Camping':
-          accommodationFootprint = travelers * 0.002; // calculation for camping
-          break;
-        default:
-          accommodationFootprint = 0; // Handle other or unknown accommodation types
-      }
-
-      const totalFootprint = transportationFootprint + accommodationFootprint;
-      setCarbonFootprint(totalFootprint.toFixed(2)); // Round to two decimal places
-    } catch (error) {
-      setErrorMessage(error.message);
-    }
-
-    setIsLoading(false); // Clear loading state
+  // Predefined footprint per kilometer per passenger (g/pax*km) converted to kg
+  const transportFootprintMap = {
+    CarTravel: 0.15 * travelers, // average car emissions (kg/km) and convert to kg per pax*km
+    Flight: 0.2 * travelers,    //  plane emissions (kg/pax*km) converted to kg
+    PublicTransit: 0.04 * travelers, // efficient public transport emissions (kg/pax*km) converted to kg
+    MotoBike: 0.1 * travelers,   //  value for motorbike emissions (kg/pax*km) converted to kg
   };
+
+  // Input validation for transportation mode
+  if (!transportationMode) {
+    throw new Error('Please select a transportation mode.');
+  }
+
+  // Check if footprint data exists for the chosen mode
+  if (!transportFootprintMap[transportationMode]) {
+    throw new Error('Data for this transportation mode is not available.');
+  }
+
+  const transportationFootprintKg = transportFootprintMap[transportationMode] * distance / 1000;
+
+  let accommodationFootprint = 0;
+  switch (accommodationType) {
+    case 'Hotel':
+      accommodationFootprint = travelers * 0.04; // kg per person per night
+      break;
+    case 'Airbnb':
+      accommodationFootprint = travelers * 0.02; // kg per person per night
+      break;
+    case 'Camping':
+      accommodationFootprint = travelers * 0.002; // kg per person per night
+      break;
+    default:
+      accommodationFootprint = 0; // Handle other or unknown accommodation types
+  }
+
+  const totalFootprint = transportationFootprintKg + accommodationFootprint;
+  setCarbonFootprint(totalFootprint.toFixed(2)); // Round to two decimal places
+  setIsLoading(false);
+};
 
   return (
     <div className="impact-calculator">
