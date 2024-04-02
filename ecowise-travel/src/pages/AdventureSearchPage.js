@@ -70,4 +70,11 @@ const AdventuresPage = () => {
   );
 };
 
+{/* Contact Section */}
+      <section className="contact-section">
+        <h2>Contact Us</h2>
+        <p>Have any questions or feedback? Feel free to reach out!</p>
+        <p><Link to="/">Go back to homepage to fill the contact form.</Link></p>
+      </section>
+
 export default AdventuresPage;
