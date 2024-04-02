@@ -4,7 +4,7 @@ const ReviewPage = () => {
   const [review, setReview] = useState({
     destination: '',
     rating: 0,
-    comment: ''
+    comment: '',
   });
 
   const handleChange = (e) => {
@@ -20,71 +20,68 @@ const ReviewPage = () => {
     setReview({
       destination: '',
       rating: 0,
-      comment: ''
+      comment: '',
     });
   };
 
   return (
-     <div> 
-  
-    <div style={styles.container}>
-      <h1 style={styles.title}>Submit a Review</h1>
-      <form onSubmit={handleSubmit}>
-        <div style={styles.formGroup}>
-          <label htmlFor="destination">Destination:</label>
-          <input
-            type="text"
-            id="destination"
-            name="destination"
-            value={review.destination}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div style={styles.formGroup}>
-          <label htmlFor="rating">Rating:</label>
-          <input
-            type="number"
-            id="rating"
-            name="rating"
-            value={review.rating}
-            onChange={handleChange}
-            min="0"
-            max="5"
-            step="0.1"
-            required
-          />
-        </div>
-        <div style={styles.formGroup}>
-          <label htmlFor="comment">Comment:</label>
-          <textarea
-            id="comment"
-            name="comment"
-            value={review.comment}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </div>
-        <button type="submit">Submit Review</button>
-      </form>
-    </div>
+    <div className="review-page">
+      <header className="review-header">
+        <h1 className="review-title">Share Your Travel Experience</h1>
+        <p className="review-description">
+          Let others know about your recent trip by submitting a review. Help fellow
+          travelers make informed decisions by sharing your honest feedback
+          about your destination.
+        </p>
+      </header>
+      <div className="review-form-container">
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="destination">Destination:</label>
+            <input
+              type="text"
+              id="destination"
+              name="destination"
+              value={review.destination}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="rating">Rating:</label>
+            <input
+              type="number"
+              id="rating"
+              name="rating"
+              value={review.rating}
+              onChange={handleChange}
+              min="0"
+              max="5"
+              step="0.1"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="comment">Comment:</label>
+            <textarea
+              id="comment"
+              name="comment"
+              value={review.comment}
+              onChange={handleChange}
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Submit Review</button>
+        </form>
+      </div>
+                
+         <section className="contact-section">
+        <h2>Contact Us</h2>
+        <p>Have any questions or feedback? Feel free to reach out!</p>
+        <p><Link to="/">Go back to homepage to fill the contact form.</Link></p>
+      </section>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    padding: '20px',
-    backgroundColor: '#f5f5f5',
-  },
-  title: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    marginBottom: '20px',
-  },
-  formGroup: {
-    marginBottom: '20px',
-  },
 };
 
 export default ReviewPage;
