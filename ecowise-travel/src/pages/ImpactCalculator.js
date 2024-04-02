@@ -43,7 +43,6 @@ const ImpactCalculator = () => {
       const response = await axios.get(apiUrlMap[transportationMode], {
         params: {
           distance: Number(distance),
-          passengers: Number(travelers),
         },
         headers: {
           'X-RapidAPI-Key': apiKey,
@@ -51,19 +50,22 @@ const ImpactCalculator = () => {
         },
       });
 
-      const data = response.data;
-      const transportationFootprint = data.carbon_footprint || 0;
+      if (!response.data || !response.data.carbon_footprint) {
+        throw new Error('Failed to calculate carbon footprint. Please try again later.');
+      }
+
+      const transportationFootprint = response.data.carbon_footprint;
       
       let accommodationFootprint = 0;
       switch (accommodationType) {
         case 'Hotel':
-          accommodationFootprint = travelers * 50; // Example calculation for hotel (replace with more accurate data if available)
+          accommodationFootprint = travelers * 0.04; // calculation for hotel 
           break;
         case 'Airbnb':
-          accommodationFootprint = travelers * 40; // Example calculation for Airbnb (replace with more accurate data if available)
+          accommodationFootprint = travelers * 0.02; // calculation for Airbnb
           break;
         case 'Camping':
-          accommodationFootprint = travelers * 25; // Example calculation for camping (replace with more accurate data if available)
+          accommodationFootprint = travelers * 0.002; // calculation for camping
           break;
         default:
           accommodationFootprint = 0; // Handle other or unknown accommodation types
@@ -116,7 +118,7 @@ const ImpactCalculator = () => {
         </select>
       </div>
       <div className="input-container">
-        <label htmlFor="accommodationType">Accommodation Type (Optional):</label>
+        <label htmlFor="accommodationType">Accommodation Type (per night):</label>
         <select
           id="accommodationType"
           name="accommodationType"
