@@ -32,7 +32,7 @@ function App() {
           <Route path="/contact-form" element={<ContactForm />} />
           <Route path="*" element={null} />
         </Routes>
-        <ContactForm />
+      //  <ContactForm />
         <Footer />
       </div>
     </Router>
