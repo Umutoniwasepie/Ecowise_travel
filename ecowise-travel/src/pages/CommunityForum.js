@@ -35,7 +35,7 @@ const CommunityForum = () => {
   return (
     <div className="community-forum">
       <header className="forum-header">
-        <h1 className="forum-title">Ecowise Travel Community Forum</h1>
+        <h1 className="forum-title">Community Forum</h1>
         <p className="forum-description">Share your sustainable travel experiences, ask questions, and get inspired by fellow eco-conscious travelers! </p>
       </header>
       <div className="forum-content">
