@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Impactcalculator.css'; // Import your CSS file for styling
+import axios from 'axios';
 
 const ImpactCalculator = () => {
   const [tripDetails, setTripDetails] = useState({
@@ -43,7 +44,7 @@ const ImpactCalculator = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-RapidAPI-Key': 'd9677418b2msh740d6cd4752d889p125e87jsn63f0305fadbb',
+          'X-RapidAPI-Key': apiKey,
           'X-RapidAPI-Host': 'carbonfootprint1.p.rapidapi.com',
         },
         body: JSON.stringify({
@@ -57,7 +58,25 @@ const ImpactCalculator = () => {
       }
 
       const data = await response.json();
-      setCarbonFootprint(data.carbon_footprint.toFixed(2));
+      const transportationFootprint = data.carbon_footprint;
+      
+      let accommodationFootprint = 0;
+      switch (accommodationType) {
+        case 'Hotel':
+          accommodationFootprint = travelers * 50; // Example calculation for hotel (replace with more accurate data if available)
+          break;
+        case 'Airbnb':
+          accommodationFootprint = travelers * 40; // Example calculation for Airbnb (replace with more accurate data if available)
+          break;
+        case 'Camping':
+          accommodationFootprint = travelers * 25; // Example calculation for camping (replace with more accurate data if available)
+          break;
+        default:
+          accommodationFootprint = 0; // Handle other or unknown accommodation types
+      }
+
+      const totalFootprint = transportationFootprint + accommodationFootprint;
+      setCarbonFootprint(totalFootprint.toFixed(2)); // Round to two decimal places
     } catch (error) {
       setErrorMessage(error.message);
     }
@@ -112,8 +131,8 @@ const ImpactCalculator = () => {
         >
           <option value="">Select</option>
           <option value="Hotel">Hotel</option>
-          <option value="Airbnb">Eco-lodge</option>
-          <option value="Camping">Hostel</option>
+          <option value="Airbnb">Airbnb</option>
+          <option value="Camping">Camping</option>
         </select>
       </div>
       <div className="input-container">
