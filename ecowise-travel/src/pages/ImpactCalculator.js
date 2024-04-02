@@ -44,7 +44,7 @@ const ImpactCalculator = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-RapidAPI-Key': apiKey,
+          'X-RapidAPI-Key': 'd9677418b2msh740d6cd4752d889p125e87jsn63f0305fadbb';
           'X-RapidAPI-Host': 'carbonfootprint1.p.rapidapi.com',
         },
         body: JSON.stringify({
