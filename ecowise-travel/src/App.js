@@ -28,6 +28,7 @@ function App() {
           <Route path="/reviews" element={<ReviewPage />} />
           <Route path="/impact-calculator" element={<ImpactCalculator />} />
           <Route path="/Signin" element={<Signin />} />
+          <Route path="/Signup" element={<Signup />} />
           <Route path="*" element={null} />
         </Routes>
 {/* <ContactForm /> */}
