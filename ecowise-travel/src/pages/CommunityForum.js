@@ -8,9 +8,18 @@ const CommunityForum = () => {
   // Dummy data for forum posts
   useEffect(() => {
     const dummyPosts = [
-      { id: 1, title: 'First post', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-      { id: 2, title: 'Second post', content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-      { id: 3, title: 'Third post', content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' },
+      {
+        id: 1,
+        title: 'Incredible Wildlife Encounters in Costa Rica!',
+        content:
+          "Just got back from Costa Rica, and it was amazing! I spent most of my time hiking through rainforests and spotting incredible wildlife – monkeys, sloths, toucans, you name it!  \n\nSustainability is really important to me, so I stayed in an eco-lodge and participated in some conservation efforts. It felt great to travel responsibly and experience the beauty of nature. \n\nAnyone else been to Costa Rica? What were your favorite experiences? Let's chat about wildlife conservation, sustainable travel tips, and unforgettable adventures in the tropics!"
+      },
+      {
+        id: 2,
+        title: 'Inspired by Sustainable Practices in Scandinavia!',
+        content:
+          "Hey everyone!  Just returned from a trip to Norway and Sweden, and I'm so impressed by their commitment to sustainability.  From eco-friendly hotels and restaurants to using renewable energy, Scandinavia is a real leader in responsible tourism. \n\nI saw some amazing things – glaciers, fjords, charming towns – but what truly stuck with me was the focus on environmental responsibility. \n\nAnyone else have experience traveling sustainably in Scandinavia?  What eco-friendly practices did you encounter?  Let's share tips and ideas for minimizing our environmental impact while exploring beautiful places!"
+      },
     ];
     setPosts(dummyPosts);
   }, []);
@@ -23,15 +32,16 @@ const CommunityForum = () => {
   };
 
   return (
-    <div>
-
-      {/* Community Forum Content */}
-      <div style={styles.container}>
-        <h1 style={styles.title}>Community Forum</h1>
+    <div className="community-forum">
+      <header className="forum-header">
+        <h1 className="forum-title">Travel Green Community Forum</h1>
+        <p className="forum-description">Share your sustainable travel experiences, ask questions, and get inspired by fellow eco-conscious travelers!</p>
+      </header>
+      <div className="forum-content">
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="Title"
+            placeholder="Share your travel story title..."
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
@@ -42,54 +52,21 @@ const CommunityForum = () => {
             onChange={(e) => setContent(e.target.value)}
             required
           ></textarea>
-          <button type="submit">Submit</button>
+          <button type="submit">Start a Discussion</button>
         </form>
         {/* Display existing forum posts */}
-        <div style={styles.posts}>
+        <section className="forum-posts">
+          <h2>Recent Discussions</h2>
           {posts.map((post) => (
-            <div key={post.id} style={styles.post}>
-              <h2>{post.title}</h2>
+            <article key={post.id} className="forum-post">
+              <h3>{post.title}</h3>
               <p>{post.content}</p>
-            </div>
+            </article>
           ))}
-        </div>
+        </section>
       </div>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    padding: '20px',
-    backgroundColor: '#f5f5f5',
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  logo: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    color: '#336633',
-  },
-  navigation: {
-    display: 'flex',
-  },
-  title: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    marginBottom: '20px',
-  },
-  posts: {
-    marginTop: '20px',
-  },
-  post: {
-    marginBottom: '20px',
-    padding: '10px',
-    backgroundColor: '#ffffff',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-  },
 };
 
 export default CommunityForum;
