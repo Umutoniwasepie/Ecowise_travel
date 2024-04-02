@@ -41,10 +41,10 @@ const ImpactCalculator = () => {
       }
 
       const response = await fetch(apiUrlMap[transportationMode], {
-        method: 'POST',
+        method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'X-RapidAPI-Key': 'd9677418b2msh740d6cd4752d889p125e87jsn63f0305fadbb';
+          'X-RapidAPI-Key': 'd9677418b2msh740d6cd4752d889p125e87jsn63f0305fadbb',
           'X-RapidAPI-Host': 'carbonfootprint1.p.rapidapi.com',
         },
         body: JSON.stringify({
