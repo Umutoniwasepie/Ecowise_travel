@@ -40,25 +40,19 @@ const ImpactCalculator = () => {
         throw new Error('Please select a transportation mode.');
       }
 
-      const response = await fetch(apiUrlMap[transportationMode], {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-RapidAPI-Key': 'd9677418b2msh740d6cd4752d889p125e87jsn63f0305fadbb',
-          'X-RapidAPI-Host': 'carbonfootprint1.p.rapidapi.com',
-        },
-        body: JSON.stringify({
+      const response = await axios.get(apiUrlMap[transportationMode], {
+        params: {
           distance: Number(distance),
           passengers: Number(travelers),
-        }),
+        },
+        headers: {
+          'X-RapidAPI-Key': apiKey,
+          'X-RapidAPI-Host': 'carbonfootprint1.p.rapidapi.com',
+        },
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to calculate carbon footprint. Please try again later.');
-      }
-
-      const data = await response.json();
-      const transportationFootprint = data.carbon_footprint;
+      const data = response.data;
+      const transportationFootprint = data.carbon_footprint || 0;
       
       let accommodationFootprint = 0;
       switch (accommodationType) {
