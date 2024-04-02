@@ -18,9 +18,6 @@ const Footer = () => {
             <li>
               <Link to="/signin">Sign In</Link>
             </li>
-            <li>
-              <Link to="/signup">Sign Up</Link>
-            </li>
           </ul>
         </nav>
         <div className="copyright">
