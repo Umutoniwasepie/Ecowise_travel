@@ -69,8 +69,7 @@ const AdventuresPage = () => {
     </div>
   );
 };
-
-{/* Contact Section */}
+          {/* Contact Section */}
       <section className="contact-section">
         <h2>Contact Us</h2>
         <p>Have any questions or feedback? Feel free to reach out!</p>
