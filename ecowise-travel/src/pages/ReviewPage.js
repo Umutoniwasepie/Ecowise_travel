@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Reviewpage.css';
 
 const ReviewPage = () => {
   const [review, setReview] = useState({
