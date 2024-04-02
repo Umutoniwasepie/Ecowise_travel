@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link to="/impact-calculator" className="nav-link">Impact Calculator</Link>
         <Link to="/community-forum" className="nav-link">Community Forum</Link>
         <Link to="/reviews" className="nav-link">Reviews</Link>
-        <Link to="/signin" className="nav-link">Sign In</Link>
+        <Link to="/signin" className="nav-link">Sign In/Up</Link>
          {/*<Link to="/signup" className="nav-link">Sign Up</Link> */}
       </div>
     </nav>
