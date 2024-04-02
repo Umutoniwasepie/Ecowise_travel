@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Communityforum.css';
 
 const CommunityForum = () => {
   const [title, setTitle] = useState('');
