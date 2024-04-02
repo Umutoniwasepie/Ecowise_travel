@@ -43,7 +43,7 @@ const ImpactCalculator = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-RapidAPI-Key': apiKey,
+          'X-RapidAPI-Key': 'd9677418b2msh740d6cd4752d889p125e87jsn63f0305fadbb',
           'X-RapidAPI-Host': 'carbonfootprint1.p.rapidapi.com',
         },
         body: JSON.stringify({
@@ -69,10 +69,13 @@ const ImpactCalculator = () => {
     <div className="impact-calculator">
       <h1 className="calculator-title">Travel Footprint Estimator</h1>
       <p className="calculator-description">
-        Estimate the potential environmental impact of your trip by entering travel details.
-        These are estimates based on averages and may not be fully accurate. Consider using
-        eco-friendly travel options and supporting sustainable practices to reduce your
-        environmental footprint.
+        Ever wondered how your travels impact the environment? Your carbon footprint
+        measures the amount of greenhouse gases, like carbon dioxide, released due to
+        your activities. Traveling by car, plane, or even choosing specific
+        accommodations all contribute to this footprint. Understanding your footprint
+        is the first step towards making more sustainable travel choices. Let's
+        estimate the potential environmental impact of your trip and explore ways to
+        minimize it!
       </p>
       <div className="input-container">
         <label htmlFor="distance">Travel Distance (km):</label>
@@ -131,7 +134,7 @@ const ImpactCalculator = () => {
         <div className="footprint-result">
           <p>Your estimated carbon footprint for this trip is: {carbonFootprint} kg CO2.</p>
           <p>
-            Remember, this is an estimate. Consider exploring ways to reduce your impact,
+            Consider exploring ways to reduce your impact,
             such as choosing eco-friendly transportation or sustainable accommodations.
           </p>
         </div>
