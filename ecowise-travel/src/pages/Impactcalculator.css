@@ -1,47 +1,74 @@
 .impact-calculator {
+  font-family: sans-serif;
+  margin: 0 auto; /* Center the calculator horizontally */
+  max-width: 600px; /* Set a maximum width */
   padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 400px; /* Set a fixed width for the calculator */
-  height: 400px; /* Set a fixed height for a square container */
-  margin: 0 auto; /* Removed unnecessary positioning */
 }
 
 .calculator-title {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: center;
+}
+
+.calculator-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .input-container {
   margin-bottom: 15px;
-  display: flex;
-  align-items: center;
 }
 
 .input-container label {
-  flex: 0 0 120px; /* Set width for label */
-  margin-right: 10px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select,
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 0; /* Remove default input margin */
+  font-size: 16px;
+  border-radius: 4px;
+  width: 100%; /* Make inputs full width */
+}
+
+button {
+  background-color: #336633;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #295629;
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: default;
 }
 
 .footprint-result {
-  font-size: 18px;
   margin-top: 20px;
-  text-align: center;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
 }
 
-button[type="button"] {
-  background-color: #336633; /* Eco-friendly green color for button */
-  color: #fff; /* White text color */
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
-}
-
-button[type="button"]:hover {
-  background-color: #2e5e2e; /* Darker green on hover */
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
 }
