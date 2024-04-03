@@ -2,7 +2,7 @@
   "name": "eco-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js && open http://localhost:5000",
     "test": "echo \"Error: no test specified\" && exit 1"
