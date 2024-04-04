@@ -51,6 +51,7 @@ router.post('/login', async (req, res) => {
     }
 
     // Generate a JWT
+    console.log('JWT_SECRET:', process.env.JWT_SECRET);
     jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' }, (err, token) => {
       if (err) {
         console.error('Error generating JWT token:', err);
