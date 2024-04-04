@@ -4,6 +4,8 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const { protectRoutes } = require('../middleware/authMiddleware'); // Import the protectRoutes middleware
 
+const router = express.Router();
+
 // Apply the protectRoutes middleware to all routes in this file
 router.use(protectRoutes);
 
