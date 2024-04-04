@@ -29,7 +29,7 @@ router.post('/register', async (req, res) => {
     res.status(201).json(newUser);
   } catch (error) {
     console.error('Error registering user:', error);
-    res.status(500).json({ message: 'Failed to register user' });
+    res.status(500).json({ message: 'Failed to register user', error: error.message });
   }
 });
 
@@ -56,7 +56,7 @@ router.post('/login', async (req, res) => {
     res.status(200).json({ token });
   } catch (error) {
     console.error('Error logging in:', error);
-    res.status(500).json({ message: 'Failed to log in' });
+    res.status(500).json({ message: 'Failed to log in', error: error.message });
   }
 });
 
@@ -65,11 +65,14 @@ router.put('/profile', async (req, res) => {
   try {
     const { username, email } = req.body;
     const userId = req.user.id; // Retrieve user ID from authenticated user
-    const updatedUser = await User.update({ username, email }, { where: { id: userId } });
-    res.status(200).json(updatedUser);
+    const [updatedCount] = await User.update({ username, email }, { where: { id: userId } });
+    if (updatedCount === 0) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    res.status(200).json({ message: 'User profile updated successfully' });
   } catch (error) {
     console.error('Error updating user profile:', error);
-    res.status(500).json({ message: 'Failed to update user profile' });
+    res.status(500).json({ message: 'Failed to update user profile', error: error.message });
   }
 });
 
@@ -95,12 +98,12 @@ router.put('/password', async (req, res) => {
     const hashedPassword = await bcrypt.hash(newPassword, 10);
 
     // Update user's password
-    await User.update({ password: hashedPassword }, { where: { id: userId } });
+    await user.update({ password: hashedPassword });
 
     res.status(200).json({ message: 'Password changed successfully' });
   } catch (error) {
     console.error('Error changing password:', error);
-    res.status(500).json({ message: 'Failed to change password' });
+    res.status(500).json({ message: 'Failed to change password', error: error.message });
   }
 });
 
