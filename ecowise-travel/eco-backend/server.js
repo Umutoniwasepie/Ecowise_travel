@@ -1,7 +1,6 @@
 const express = require('express');
 const sequelize = require('./models/user').sequelize;
 const ecoTravelRoutes = require('./routes/ecoTravelRoutes');
-const { sequelize } = require('./models'); // Import Sequelize instance
 const userRoutes = require('./routes/userRoutes');
 
 const app = express();
