@@ -14,7 +14,7 @@ import CommunityForum from './pages/CommunityForum';
 import ContactForm from './pages/ContactForm';
 import ReviewPage from './pages/ReviewPage';
 import Userprofile from './components/Userprofile';
-import ProtectedRoute from './components/ProtectedRoute';
+//import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 import './styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
