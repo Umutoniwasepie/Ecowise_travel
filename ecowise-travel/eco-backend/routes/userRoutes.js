@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const User = require('../models/user');
+const { User } = require('../models'); // Import the User model correctly
 const { protectRoutes } = require('../middleware/authMiddleware'); // Import the protectRoutes middleware
 
 const router = express.Router();
@@ -15,10 +15,10 @@ router.post('/register', async (req, res) => {
     const { username, email, password } = req.body;
 
     // Check if the email is already registered
-    const existingUser = await User.findAll({ where: { email } });
-    if (existingUsers.length > 0) {
-     return res.status(400).json({ message: 'Email is already registered' });
-   }
+    const existingUser = await User.findOne({ where: { email } });
+    if (existingUser) {
+      return res.status(400).json({ message: 'Email is already registered' });
+    }
 
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -29,7 +29,7 @@ router.post('/register', async (req, res) => {
     res.status(201).json(newUser);
   } catch (error) {
     console.error('Error registering user:', error);
-    res.status(500).json({ message: 'Failed to register user', error: error.message });
+    res.status(500).json({ message: 'Failed to register user' });
   }
 });
 
