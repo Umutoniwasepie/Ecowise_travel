@@ -1,22 +1,27 @@
 // SignIn.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios'; // Import Axios
+import { Link, useHistory } from 'react-router-dom';
+import axios from 'axios';
 import './AuthStyles.css';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/users/login', { email, password }); // Make a POST request to your backend login endpoint
-      console.log(res.data); // Handle successful login (e.g., redirect to dashboard)
-      // Redirect the user to the dashboard or some other page
+      const res = await axios.post('http://localhost:5000/api/users/login', { email, password });
+      console.log('Login response:', res.data);
+      // Store token in local storage
+      localStorage.setItem('token', res.data.token);
+      // Redirect to homepage after successful login
+      history.push('/homepage');
     } catch (err) {
-      console.error(err.response); // Log the entire error response from the backend
-      console.log('An error occurred during login:', err.response?.data?.message || 'An error occurred during login'); // Log the error message
+      console.error('Error signing in:', err.response?.data?.message || 'An error occurred during sign in');
+      // Display error message to the user
+      alert(err.response?.data?.message || 'An error occurred during sign in');
     }
   };
 
