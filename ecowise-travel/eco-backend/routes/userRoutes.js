@@ -32,7 +32,6 @@ router.post('/register', async (req, res) => {
     res.status(500).json({ message: 'Failed to register user' });
   }
 });
-const router = express.Router();
 
 // User Login
 router.post('/login', async (req, res) => {
