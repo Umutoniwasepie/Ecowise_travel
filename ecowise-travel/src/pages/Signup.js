@@ -1,5 +1,7 @@
+// SignUp.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios'; // Import Axios
 import './AuthStyles.css';
 
 const SignUp = () => {
@@ -7,9 +9,14 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle sign-up logic (e.g., call API to create user)
+    try {
+      const res = await axios.post('/api/users/register', { name, email, password }); // Make a POST request to your backend register endpoint
+      console.log(res.data); // Handle successful registration (e.g., redirect to login page)
+    } catch (err) {
+      console.error(err.response.data); // Handle registration error
+    }
   };
 
   return (
