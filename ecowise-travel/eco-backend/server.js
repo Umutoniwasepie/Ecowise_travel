@@ -1,5 +1,5 @@
 const express = require('express');
-const sequelize = require('./models/user').sequelize;
+const { sequelize } = require('./models/user').sequelize;
 const ecoTravelRoutes = require('./routes/ecoTravelRoutes');
 const userRoutes = require('./routes/userRoutes');
 
