@@ -6,7 +6,7 @@ const adventuresData = [
   {
     id: 1,
     title: 'Rwanda',
-    image: './gorilla-rwanda.jpg'
+    image: './gorilla-rwanda.jpg',
     description: 'Embark on a journey to Rwanda, the land of a thousand hills. Explore the lush rainforests of Volcanoes National Park and encounter the magnificent mountain gorillas in their natural habitat. Immerse yourself in the vibrant culture of Rwanda while supporting sustainable ecotourism initiatives that contribute to wildlife conservation and local community development.',
     rating: 4.7
   },
