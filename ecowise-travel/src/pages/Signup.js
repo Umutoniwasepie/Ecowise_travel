@@ -12,7 +12,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('/api/users/register', { name, email, password }); // Make a POST request to your backend register endpoint
+      const res = await axios.post('http://localhost:5000/api/users/register', { name, email, password }); // Make a POST request to your backend register endpoint
       console.log(res.data); // Handle successful registration (e.g., redirect to login page)
     } catch (err) {
       console.error(err.response.data); // Handle registration error
