@@ -68,6 +68,10 @@ router.post('/login', async (req, res) => {
 // Update User Profile Endpoint
 router.put('/profile', async (req, res) => {
   try {
+    if (!req.user) {
+      return res.status(401).json({ message: 'User not authenticated' });
+    }
+
     const { username, email } = req.body;
     const userId = req.user.id; // Retrieve user ID from authenticated user
     const [updatedCount] = await User.update({ username, email }, { where: { id: userId } });
