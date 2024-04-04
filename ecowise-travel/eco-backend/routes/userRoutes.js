@@ -51,9 +51,13 @@ router.post('/login', async (req, res) => {
     }
 
     // Generate a JWT
-    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-
-    res.status(200).json({ token });
+    jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' }, (err, token) => {
+      if (err) {
+        console.error('Error generating JWT token:', err);
+        return res.status(500).json({ message: 'Failed to log in' });
+      }
+      res.status(200).json({ token });
+    });
   } catch (error) {
     console.error('Error logging in:', error);
     res.status(500).json({ message: 'Failed to log in', error: error.message });
