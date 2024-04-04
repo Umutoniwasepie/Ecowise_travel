@@ -2,6 +2,7 @@ const express = require('express');
 const { sequelize } = require('./models'); // Import Sequelize instance
 const ecoTravelRoutes = require('./routes/ecoTravelRoutes');
 const userRoutes = require('./routes/userRoutes');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
