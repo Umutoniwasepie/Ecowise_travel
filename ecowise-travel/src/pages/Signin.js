@@ -12,7 +12,7 @@ const SignIn = () => {
     e.preventDefault();
     // Handle sign-in logic (e.g., call API to authenticate)
     // After successful login, set redirectToHome to true
-    setRedirectToHome(true);
+    setredirectToHome(true);
   };
 
   if (redirectToHome) {
