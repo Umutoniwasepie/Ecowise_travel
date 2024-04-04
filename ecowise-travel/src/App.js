@@ -34,7 +34,7 @@ function App() {
           <Route path="/impact-calculator" element={<ImpactCalculator />} />
           <Route path="/Signin" element={<Signin />} />
           <Route path="/Signup" element={<Signup />} />
-          <Route path="/profile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
+          <Route path="/profile" element={<ProtectedRoute><Userprofile /></ProtectedRoute>} />
           <Route path="*" element={null} />
         </Routes>
 {/* <ContactForm /> */}
