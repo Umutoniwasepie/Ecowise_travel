@@ -9,14 +9,16 @@ const SignIn = () => {
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post('http://localhost:5000/api/users/login', { email, password }); // Make a POST request to your backend login endpoint
-      console.log(res.data); // Handle successful login (e.g., redirect to dashboard)
-    } catch (err) {
-      console.error(err.response.data); // Handle login error
-    }
-  };
+  e.preventDefault();
+  try {
+    const res = await axios.post('http://localhost:5000/api/users/login', { email, password }); // Make a POST request to your backend login endpoint
+    console.log(res.data); // Handle successful login (e.g., redirect to dashboard)
+    // Redirect the user to the dashboard or some other page
+  } catch (err) {
+    console.error(err.response); // Log the entire error response from the backend
+    setError(err.response?.data?.message || 'An error occurred during login'); // Set error message to display to the user
+  }
+};
 
   return (
     <div className="auth-container">
