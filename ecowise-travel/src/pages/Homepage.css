@@ -115,7 +115,7 @@
 .card-image {
   flex-grow: 2;
   width: 100%;
-  height: 300px;
+  height: 500px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -211,19 +211,23 @@
 .card:nth-child(1) .card-image {
   background-image: url('./featured-image1.jpg'); /* Assuming images are in the same folder */
   background-size: cover;
+  background-position: center;
 }
 
 .card:nth-child(2) .card-image {
   background-image: url('./featured-image2.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 .card:nth-child(3) .card-image {
   background-image: url('./jaco-costarica.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 .card:nth-child(4) .card-image {
   background-image: url('./instabul-turkey.jpg');
   background-size: cover;
+  background-position: center;
 }
