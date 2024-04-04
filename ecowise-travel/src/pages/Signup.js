@@ -1,23 +1,28 @@
 // SignUp.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios'; // Import Axios
+import { Link, useHistory } from 'react-router-dom';
+import axios from 'axios';
 import './AuthStyles.css';
 
 const SignUp = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  try {
-    const res = await axios.post('http://localhost:5000/api/users/register', { name, email, password }); // Make a POST request to your backend register endpoint
-    console.log('Registration response:', res); // Log the response
-  } catch (err) {
-    console.error('Error registering user:', err.response?.data?.message || 'An error occurred during registration'); // Log the error message
-  }
-};
+    e.preventDefault();
+    try {
+      const res = await axios.post('http://localhost:5000/api/users/register', { name, email, password });
+      console.log('Registration response:', res.data);
+      // Redirect to homepage after successful registration
+      history.push('/homepage');
+    } catch (err) {
+      console.error('Error registering user:', err.response?.data?.message || 'An error occurred during registration');
+      // Display error message to the user
+      alert(err.response?.data?.message || 'An error occurred during registration');
+    }
+  };
 
   return (
     <div className="auth-container">
