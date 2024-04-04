@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 //import Header from './components/Header';
 import Navbar from './components/Navbar';
-import { AuthContext, AuthProvider } from './AuthContext';
+//import { AuthContext, AuthProvider } from './AuthContext';
 import Footer from './components/Footer';
 //import { AuthProvider } from './context/AuthContext';
 import HomePage from './pages/HomePage';
@@ -12,13 +12,13 @@ import Signin from './pages/Signin';
 import AdventureSearchPage from './pages/AdventureSearchPage';
 import ImpactCalculator from './pages/ImpactCalculator';
 import CommunityForum from './pages/CommunityForum';
-import ContactForm from './pages/ContactForm';
+//import ContactForm from './pages/ContactForm';
 import ReviewPage from './pages/ReviewPage';
 import Userprofile from './components/Userprofile';
 import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 import './styles.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function App() {
   return (
@@ -34,6 +34,7 @@ function App() {
           <Route path="/impact-calculator" element={<ImpactCalculator />} />
           <Route path="/Signin" element={<Signin />} />
           <Route path="/Signup" element={<Signup />} />
+          <Route path="/profile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
           <Route path="*" element={null} />
         </Routes>
 {/* <ContactForm /> */}
