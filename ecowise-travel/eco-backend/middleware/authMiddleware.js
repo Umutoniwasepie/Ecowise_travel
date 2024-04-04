@@ -1,5 +1,3 @@
-// authMiddleware.js
-
 const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 
@@ -17,7 +15,7 @@ const verifyToken = async (req, res, next) => {
     // Check if user exists
     const user = await User.findByPk(decoded.userId);
     if (!user) {
-      return res.status(401).json({ message: 'Invalid token' });
+      return res.status(401).json({ message: 'Invalid token: User not found' });
     }
 
     // Attach user object to request for further processing
