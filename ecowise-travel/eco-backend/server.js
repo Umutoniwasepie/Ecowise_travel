@@ -1,11 +1,14 @@
+require('dotenv').config();
 const express = require('express');
 const { sequelize } = require('./models'); // Import Sequelize instance
 const ecoTravelRoutes = require('./routes/ecoTravelRoutes');
 const userRoutes = require('./routes/userRoutes');
-require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Debug: Print JWT_SECRET value
+console.log('JWT_SECRET:', process.env.JWT_SECRET);
 
 // Middleware to parse incoming request bodies
 app.use(express.json());
