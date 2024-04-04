@@ -1,36 +1,29 @@
 // SignIn.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './AuthStyles.css';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/users/login', {
+      const response = await fetch('/api/login', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ email, password }),
       });
-      
-      if (response.ok) {
-        const data = await response.json();
-        // Store JWT token in local storage
-        localStorage.setItem('token', data.token);
-        // Redirect to homepage after successful login
-        window.location.href = '/homepage';
-      } else {
-        const data = await response.json();
-        alert(data.message); // Display error message
-      }
+      const data = await response.json();
+      localStorage.setItem('token', data.token); // Store JWT token in local storage
+      history.push('/'); // Redirect to homepage
     } catch (error) {
-      console.error('Error signing in:', error);
-      alert('Failed to sign in. Please try again.');
+      console.error('Error logging in:', error);
+      // Handle error (e.g., display error message to user)
     }
   };
 
