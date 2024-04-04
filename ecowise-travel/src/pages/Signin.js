@@ -1,27 +1,36 @@
 // SignIn.js
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './AuthStyles.css';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/users/login', { email, password });
-      console.log('Login response:', res.data);
-      // Store token in local storage
-      localStorage.setItem('token', res.data.token);
-      // Redirect to homepage after successful login
-      history.push('/homepage');
-    } catch (err) {
-      console.error('Error signing in:', err.response?.data?.message || 'An error occurred during sign in');
-      // Display error message to the user
-      alert(err.response?.data?.message || 'An error occurred during sign in');
+      const response = await fetch('/api/users/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+      });
+      
+      if (response.ok) {
+        const data = await response.json();
+        // Store JWT token in local storage
+        localStorage.setItem('token', data.token);
+        // Redirect to homepage after successful login
+        window.location.href = '/homepage';
+      } else {
+        const data = await response.json();
+        alert(data.message); // Display error message
+      }
+    } catch (error) {
+      console.error('Error signing in:', error);
+      alert('Failed to sign in. Please try again.');
     }
   };
 
