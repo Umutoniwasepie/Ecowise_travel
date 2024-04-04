@@ -44,8 +44,9 @@
 
 @keyframes slideshow {
   0% { background-image: url('hero-image1.jpg'); }
-  33.33% { background-image: url('hero-image2.jpg'); }
-  66.66% { background-image: url('hero-image3.jpg'); }
+  25% { background-image: url('hero-image2.jpg'); }
+  50% { background-image: url('hero-image3.jpg'); }
+  75% { background-image: url('convention-rwanda.jpg'); }
   100% { background-image: url('hero-image1.jpg'); } /* Loop back to first image */
 }
 
