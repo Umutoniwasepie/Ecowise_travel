@@ -1,14 +1,21 @@
+// SignIn.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios'; // Import Axios
 import './AuthStyles.css';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle sign-in logic (e.g., call API to authenticate)
+    try {
+      const res = await axios.post('/api/users/login', { email, password }); // Make a POST request to your backend login endpoint
+      console.log(res.data); // Handle successful login (e.g., redirect to dashboard)
+    } catch (err) {
+      console.error(err.response.data); // Handle login error
+    }
   };
 
   return (
