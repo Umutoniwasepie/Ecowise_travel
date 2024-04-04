@@ -48,12 +48,20 @@ const Homepage = () => {
               <p>Explore the breathtaking landscapes of Rwanda while supporting sustainable tourism initiatives. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt.</p>
             </div>
           </div>
-          {/* Add more cards as needed */}
           <div className="card">
             <div className="card-image">
             </div>
             <div className="card-content">
               <h3>Featured Destination 3</h3>
+              <p>Description of the destination...</p>
+              <p>A paragraph about the destination goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt. Quisque vulputate, libero eget consectetur interdum, metus quam scelerisque justo, a luctus velit sapien ut nunc.</p>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-image">
+            </div>
+            <div className="card-content">
+              <h3>Featured Destination 4</h3>
               <p>Description of the destination...</p>
               <p>A paragraph about the destination goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt. Quisque vulputate, libero eget consectetur interdum, metus quam scelerisque justo, a luctus velit sapien ut nunc.</p>
             </div>
