@@ -10,14 +10,14 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post('http://localhost:5000/api/users/register', { name, email, password }); // Make a POST request to your backend register endpoint
-      console.log(res.data); // Handle successful registration (e.g., redirect to login page)
-    } catch (err) {
-      console.error(err.response.data); // Handle registration error
-    }
-  };
+  e.preventDefault();
+  try {
+    const res = await axios.post('http://localhost:5000/api/users/register', { name, email, password }); // Make a POST request to your backend register endpoint
+    console.log('Registration response:', res); // Log the response
+  } catch (err) {
+    console.error('Error registering user:', err.response?.data?.message || 'An error occurred during registration'); // Log the error message
+  }
+};
 
   return (
     <div className="auth-container">
