@@ -1,33 +1,29 @@
+// SignUp.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './AuthStyles.css';
 
 const SignUp = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/users/register', {
+      const response = await fetch('/api/register', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username: name, email, password })
+        body: JSON.stringify({ name, email, password }),
       });
-      
-      if (response.ok) {
-        // Redirect to homepage after successful registration
-        window.location.href = '/homepage';
-      } else {
-        const data = await response.json();
-        alert(data.message); // Display error message
-      }
+      // Handle successful registration (e.g., display success message to user)
+      history.push('/'); // Redirect to homepage
     } catch (error) {
-      console.error('Error signing up:', error);
-      alert('Failed to sign up. Please try again.');
+      console.error('Error registering user:', error);
+      // Handle error (e.g., display error message to user)
     }
   };
 
