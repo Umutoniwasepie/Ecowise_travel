@@ -1,16 +1,17 @@
 // PrivateRoute.js
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, useHistory } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const { token } = useAuth();
+  const history = useHistory();
 
   return (
     <Route
       {...rest}
       render={(props) =>
-        token ? <Component {...props} /> : <Redirect to="/signin" />
+        token ? <Component {...props} /> : history.push('/signin')
       }
     />
   );
