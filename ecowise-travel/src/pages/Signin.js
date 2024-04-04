@@ -1,3 +1,10 @@
+/*
+Great work...Do you mind teaching me 😁 
+I now understand your question.
+
+Is it an open source project? 
+*/
+
 // SignIn.js
 import React, { useState } from 'react';
 import { Link, redirect } from 'react-router-dom'; // Import Redirect from react-router-dom
@@ -12,7 +19,7 @@ const SignIn = () => {
     e.preventDefault();
     // Handle sign-in logic (e.g., call API to authenticate)
     // After successful login, set redirectToHome to true
-    setredirectToHome(true);
+    setRedirectToHome(true);
   };
 
   if (redirectToHome) {
