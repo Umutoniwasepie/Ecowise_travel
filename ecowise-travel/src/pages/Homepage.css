@@ -222,3 +222,8 @@
   background-image: url('./jaco-costarica.jpg');
   background-size: cover;
 }
+
+.card:nth-child(4) .card-image {
+  background-image: url('./rheinhessen-germany.jpg');
+  background-size: cover;
+}
