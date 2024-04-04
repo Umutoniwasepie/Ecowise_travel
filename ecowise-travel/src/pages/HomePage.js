@@ -36,7 +36,7 @@ const Homepage = () => {
             <div className="card-content">
               <h3>Featured Destination 1</h3>
               <p>Description of the destination...</p>
-              <p>A paragraph about the destination goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt. Quisque vulputate, libero eget consectetur interdum, metus quam scelerisque justo, a luctus velit sapien ut nunc.</p>
+              <p>A paragraph about the destination goes here.</p>
             </div>
           </div>
           <div className="card">
@@ -45,7 +45,7 @@ const Homepage = () => {
             <div className="card-content">
               <h3>Featured Destination 2</h3>
               <p>Rwanda – Your next luxury eco-tourism destination.</p>
-              <p>Explore the breathtaking landscapes of Rwanda while supporting sustainable tourism initiatives. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt.</p>
+              <p>Explore the breathtaking landscapes of Rwanda while supporting sustainable tourism initiatives.</p>
             </div>
           </div>
           <div className="card">
@@ -54,7 +54,7 @@ const Homepage = () => {
             <div className="card-content">
               <h3>Featured Destination 3</h3>
               <p>Description of the destination...</p>
-              <p>A paragraph about the destination goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt. Quisque vulputate, libero eget consectetur interdum, metus quam scelerisque justo, a luctus velit sapien ut nunc.</p>
+              <p>A paragraph about the destination goes here.</p>
             </div>
           </div>
           <div className="card">
@@ -63,7 +63,7 @@ const Homepage = () => {
             <div className="card-content">
               <h3>Featured Destination 4</h3>
               <p>Description of the destination...</p>
-              <p>A paragraph about the destination goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros nec nisi facilisis tincidunt. Quisque vulputate, libero eget consectetur interdum, metus quam scelerisque justo, a luctus velit sapien ut nunc.</p>
+              <p>A paragraph about the destination goes here.</p>
             </div>
           </div>
         </div>
