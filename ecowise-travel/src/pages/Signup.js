@@ -1,31 +1,25 @@
 // SignUp.js
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom'; // Import Redirect from react-router-dom
 import './AuthStyles.css';
 
 const SignUp = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const history = useHistory();
+  const [redirectToHome, setRedirectToHome] = useState(false); // State to manage redirection
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch('/api/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, password }),
-      });
-      // Handle successful registration (e.g., display success message to user)
-      history.push('/'); // Redirect to homepage
-    } catch (error) {
-      console.error('Error registering user:', error);
-      // Handle error (e.g., display error message to user)
-    }
+    // Handle sign-up logic (e.g., call API to create user)
+    // After successful signup, set redirectToHome to true
+    setRedirectToHome(true);
   };
+
+  if (redirectToHome) {
+    // If redirectToHome is true, redirect to home page
+    return <Redirect to="/" />;
+  }
 
   return (
     <div className="auth-container">
