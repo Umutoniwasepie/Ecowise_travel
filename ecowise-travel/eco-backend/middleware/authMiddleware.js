@@ -11,6 +11,7 @@ const verifyToken = async (req, res, next) => {
   try {
     // Verify JWT token
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    console.log('Decoded token:', decoded); // Add this line to log decoded token
 
     // Check if user exists
     const user = await User.findByPk(decoded.userId);
