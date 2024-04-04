@@ -7,6 +7,7 @@ import './AuthStyles.css';
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(''); // Define setError state
 
   const handleSubmit = async (e) => {
   e.preventDefault();
