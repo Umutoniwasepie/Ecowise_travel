@@ -1,12 +1,12 @@
 // SignIn.js
 import React, { useState } from 'react';
-import { Link, redirect } from 'react-router-dom'; // Import Redirect from react-router-dom
+import { Link, Redirect } from 'react-router-dom'; // Import Redirect from react-router-dom
 import './AuthStyles.css';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [redirectToHome, setRedirectToHome] = useState(false); // State to manage redirection
+  const [RedirectToHome, setRedirectToHome] = useState(false); // State to manage redirection
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,9 +15,9 @@ const SignIn = () => {
     setRedirectToHome(true);
   };
 
-  if (redirectToHome) {
+  if (RedirectToHome) {
     // If redirectToHome is true, redirect to home page
-    return <redirect to="/" />;
+    return <Redirect to="/" />;
   }
 
   return (
