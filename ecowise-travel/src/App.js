@@ -13,7 +13,7 @@ import ImpactCalculator from './pages/ImpactCalculator';
 import CommunityForum from './pages/CommunityForum';
 import ContactForm from './pages/ContactForm';
 import ReviewPage from './pages/ReviewPage';
-import UserProfile from './components/UserProfile';
+import Userprofile from './components/Userprofile';
 import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 import './styles.css';
@@ -33,7 +33,7 @@ function App() {
           <Route path="/impact-calculator" element={<ImpactCalculator />} />
           <Route path="/Signin" element={<Signin />} />
           <Route path="/Signup" element={<Signup />} />
-          <Route path="/profile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
+          <Route path="/profile" element={<ProtectedRoute><Userprofile /></ProtectedRoute>} />
           <Route path="*" element={null} />
         </Routes>
 {/* <ContactForm /> */}
