@@ -18,7 +18,7 @@ const SignUp = () => {
 
   if (redirectToHome) {
     // If redirectToHome is true, redirect to home page
-    return <Redirect to="/" />;
+    return <redirect to="/" />;
   }
 
   return (
