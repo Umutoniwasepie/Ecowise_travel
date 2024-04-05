@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Impactcalculator.css'; // Import your CSS file for styling
-import axios from 'axios';
 
 const ImpactCalculator = () => {
   const [tripDetails, setTripDetails] = useState({
@@ -13,14 +12,14 @@ const ImpactCalculator = () => {
   const [isLoading, setIsLoading] = useState(false); // Track API call state
   const [errorMessage, setErrorMessage] = useState(null); // Store API error message
 
-  const apiKey = 'd9677418b2msh740d6cd4752d889p125e87jsn63f0305fadbb';
+ // const apiKey = 'd9677418b2msh740d6cd4752d889p125e87jsn63f0305fadbb';
 
-  const apiUrlMap = {
+ /* const apiUrlMap = {
     CarTravel: 'https://carbonfootprint1.p.rapidapi.com/CarbonFootprintFromCarTravel',
     Flight: 'https://carbonfootprint1.p.rapidapi.com/CarbonFootprintFromFlight',
     PublicTransit: 'https://carbonfootprint1.p.rapidapi.com/CarbonFootprintFromPublicTransit',
     MotoBike: 'https://carbonfootprint1.p.rapidapi.com/CarbonFootprintFromMotorBike',
-  };
+  }; */
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
