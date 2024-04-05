@@ -34,6 +34,9 @@ app.get('/', (req, res) => {
 // Example user route
 app.use('/api/users', require('./routes/userRoutes'));
 
+// Example user route
+app.get('/api/users', require('./routes/userRoutes'));
+
 // Example review route
 app.use('/api/reviews', require('./routes/reviewRoutes'));
 
