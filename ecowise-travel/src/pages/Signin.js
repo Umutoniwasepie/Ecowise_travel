@@ -1,4 +1,3 @@
-// SignIn.js
 import React, { useState } from 'react';
 import { Link, redirect } from 'react-router-dom'; // Import Redirect from react-router-dom
 import './AuthStyles.css';
@@ -6,13 +5,31 @@ import './AuthStyles.css';
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [redirectToHome, setredirectToHome] = useState(false); // State to manage redirection
+  const [redirectToHome, setRedirectToHome] = useState(false); // State to manage redirection
+  const [error, setError] = useState(null); // State to handle errors
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle sign-in logic (e.g., call API to authenticate)
-    // After successful login, set redirectToHome to true
-    setredirectToHome(true);
+
+    try {
+      const response = await fetch('http://localhost:5000/api/users/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Login failed');
+      }
+
+      // If login is successful, set redirectToHome to true
+      setRedirectToHome(true);
+    } catch (error) {
+      console.error('Error logging in:', error);
+      setError('Invalid email or password'); // Set error message for invalid login
+    }
   };
 
   if (redirectToHome) {
@@ -42,6 +59,7 @@ const SignIn = () => {
           className="auth-input"
           required
         />
+        {error && <p className="auth-error">{error}</p>} {/* Display error message if exists */}
         <button type="submit" className="auth-button">
           Sign In
         </button>
