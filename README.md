@@ -5,6 +5,8 @@
 This project is a web application designed to empower travelers to explore the world responsibly and minimize their environmental impact.
 The uniqueness of the project lies in the impact calculator, which is an excellent feature to help travelers calculate their carbon footprints and make informed decisions.
 
+### The live product URL: https://ecowise-travel.vercel.app/
+
 ### Key Features:
 
 -Optional User Registration and Authentication: Create an account for a more personalized experience (optional). Secure login allows you to manage your profile information (if registered).
