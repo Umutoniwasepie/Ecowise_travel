@@ -11,7 +11,7 @@ The uniqueness of the project lies in the impact calculator, which is an excelle
 
 -Optional User Registration and Authentication: Create an account for a more personalized experience (optional). Secure login allows you to manage your profile information (if registered).
 
---Eco-Friendly Adventure Search: Discover curated eco-friendly adventures based on your preferences. Search by destination, activity type, and sustainability criteria.
+-Eco-Friendly Adventure Search: Discover curated eco-friendly adventures based on your preferences. Search by destination, activity type, and sustainability criteria.
 
 -Impact Calculator (Unique Feature!): Estimate the carbon footprint of your planned trips. This powerful tool helps you make informed choices and minimize your environmental impact.
 
