@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom'; // Import Redirect from react-router-dom
+import { Link, redirect } from 'react-router-dom'; // Import Redirect from react-router-dom
 import './AuthStyles.css';
 
 const SignUp = () => {
@@ -35,7 +35,7 @@ const SignUp = () => {
 
   if (redirectToHome) {
     // If redirectToHome is true, redirect to home page
-    return <Redirect to="/" />;
+    return <redirect to="/" />;
   }
 
   return (
