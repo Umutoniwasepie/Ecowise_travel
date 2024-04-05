@@ -60,7 +60,7 @@ Before you begin, ensure you have the following installed on your local machine:
 1. Clone the repository:
    ```bash
    git clone https://github.com/Umutoniwasepie/Ecowise_travel.git
-   cd eco-wise-travel
+   cd ecowise_travel
 2. Install dependencies:
    ```bash
    npm install
