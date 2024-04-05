@@ -10,7 +10,7 @@ const router = express.Router();
 router.use(protectRoutes);
 
 // User Registration
-router.post('/signup', async (req, res) => {
+router.post('/register', async (req, res) => {
   try {
     const { username, email, password } = req.body;
 
@@ -34,7 +34,7 @@ router.post('/signup', async (req, res) => {
 });
 
 // User Login
-router.post('/signin', async (req, res) => {
+router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
 
