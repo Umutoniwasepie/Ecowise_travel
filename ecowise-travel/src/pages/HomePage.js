@@ -35,8 +35,8 @@ const Homepage = () => {
             </div>
             <div className="card-content">
               <h3>Featured Destination 1</h3>
-              <p>Description of the destination...</p>
-              <p>A paragraph about the destination goes here.</p>
+              <p>Your next adventure.</p>
+              <p>Looks good right?....Explore the breathtaking spaces of this place while supporting sustainable tourism initiatives.</p>
             </div>
           </div>
           <div className="card">
@@ -45,7 +45,7 @@ const Homepage = () => {
             <div className="card-content">
               <h3>Featured Destination 2</h3>
               <p>Rwanda – Your next luxury eco-tourism destination.</p>
-              <p>Explore the breathtaking landscapes of Rwanda while supporting sustainable tourism initiatives.</p>
+              <p>Explore the breathtaking spaces of Rwanda while supporting sustainable tourism initiatives.</p>
             </div>
           </div>
           <div className="card">
@@ -53,8 +53,8 @@ const Homepage = () => {
             </div>
             <div className="card-content">
               <h3>Featured Destination 3</h3>
-              <p>Description of the destination...</p>
-              <p>A paragraph about the destination goes here.</p>
+              <p>Jaco in Costa Rica</p>
+              <p>Costa Rica has many ecofriendly places, Explore its breathtaking spaces while supporting sustainable tourism initiatives.</p>
             </div>
           </div>
           <div className="card">
@@ -62,8 +62,8 @@ const Homepage = () => {
             </div>
             <div className="card-content">
               <h3>Featured Destination 4</h3>
-              <p>Description of the destination...</p>
-              <p>A paragraph about the destination goes here.</p>
+              <p>Turkey - Your next ecofriendly touristic destination </p>
+              <p>Explore the breathtaking spaces of Turkey while supporting sustainable tourism initiatives.</p>
             </div>
           </div>
         </div>
