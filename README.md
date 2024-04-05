@@ -1,11 +1,11 @@
 # Ecowise_travel
 
-Welcome to EcoWise Travel!
+### Welcome to EcoWise Travel!
 
 This project is a web application designed to empower travelers to explore the world responsibly and minimize their environmental impact.
 The uniqueness of the project lies in the impact calculator, which is an excellent feature to help travelers calculate their carbon footprints and make informed decisions.
 
-Key Features:
+### Key Features:
 
 -Optional User Registration and Authentication: Create an account for a more personalized experience (optional). Secure login allows you to manage your profile information (if registered).
 
@@ -39,7 +39,7 @@ Internet Connectivity
 The platform requires a stable internet connection to access real-time data, engage in forums, and use advocacy tools.
 Users are encouraged to have a reliable internet connection for optimal functionality.
 
-Technologies Used:
+### Technologies Used:
 
 -Frontend: React
 -Backend: Node.js with Express
