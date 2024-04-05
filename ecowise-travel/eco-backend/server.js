@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const { sequelize } = require('./models'); // Import Sequelize instance
 const ecoTravelRoutes = require('./routes/ecoTravelRoutes');
 const userRoutes = require('./routes/userRoutes');
@@ -12,6 +13,9 @@ console.log('JWT_SECRET:', process.env.JWT_SECRET);
 
 // Middleware to parse incoming request bodies
 app.use(express.json());
+
+// Enable CORS for all origins
+app.use(cors());
 
 // Test database connection
 sequelize.authenticate()
